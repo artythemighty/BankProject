@@ -1,0 +1,65 @@
+/*HomePage style*/
+.root {
+    -fx-background-color: #D0F1FF;
+}
+
+
+.button {
+    -fx-background-color: #A7D9FF;
+    -fx-border-color: #A7D9FF;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+    -fx-border-width: 2px;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px;
+    -fx-cursor: hand;
+    -fx-alignment: center;
+    -fx-transition: 0.3s;
+}
+
+
+.button:hover {
+    -fx-background-color: #A7D9FF;
+    -fx-text-fill: #D0F1FF;
+    -fx-border-color: #D0F1FF;
+}
+
+
+.vbox {
+    -fx-alignment: center;
+}
+
+
+.image-view {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 5, 0, 0, 2);
+}
+
+
+.label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #A7D9FF;
+}
+
+#taskBar{
+    -fx-background-color: white;
+}
+#message{
+    -fx-background-radius: 20px;
+    -fx-background-color:#6ea0f5 ;
+    -fx-text-fill: white;
+    -fx-font-size: 30px;
+    -fx-border-radius: 20px;
+    -fx-border-color: white;
+    -fx-border-width: 5px;
+}
+#signInBox{
+    -fx-background-radius: 20px;
+    -fx-background-color:#A7D9FF ;
+    -fx-border-radius: 20px;
+    -fx-border-color: white;
+    -fx-border-width: 5px;
+
+}
+
