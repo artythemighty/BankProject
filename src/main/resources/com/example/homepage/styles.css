@@ -81,3 +81,54 @@
     -fx-border-color: #6bbde5;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 6, 0.3, 0, 3);
 }
+
+#reportRoot {
+    -fx-background-color: #D0F1FF;
+}
+
+#reportButton {
+    -fx-background-color: #A7D9FF;
+    -fx-border-color: #A7D9FF;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+    -fx-border-width: 2px;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px;
+    -fx-cursor: hand;
+    -fx-alignment: center;
+}
+
+#reportButton:hover {
+    -fx-background-color: #8acbee;
+    -fx-cursor: hand;
+    -fx-border-color: #6bbde5;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 6, 0.3, 0, 3);
+}
+
+#reportTitle {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #004C77;
+}
+
+#incomeLabel {
+    -fx-text-fill: green;
+    -fx-font-weight: bold;
+}
+
+#expenseLabel {
+    -fx-text-fill: red;
+    -fx-font-weight: bold;
+}
+
+#balanceLabel {
+    -fx-text-fill: #004C77;
+    -fx-font-weight: bold;
+}
+
+#reportTable {
+    -fx-background-color: white;
+    -fx-border-color: #D0F1FF;
+}
+
