@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="531.0" prefWidth="898.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.chargeControl">
+   <children>
+      <VBox layoutX="299.0" layoutY="104.0" prefHeight="340.0" prefWidth="301.0">
+         <children>
+            <TextField alignment="CENTER" prefHeight="39.0" prefWidth="292.0" promptText="Enter your card number">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField alignment="CENTER" prefHeight="39.0" prefWidth="292.0" promptText="Enter the destination card number">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField alignment="CENTER" prefHeight="31.0" prefWidth="301.0" promptText="Enter the amount">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField alignment="CENTER" prefHeight="41.0" prefWidth="612.0" promptText="Cvv number">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField alignment="CENTER" prefHeight="32.0" prefWidth="301.0" promptText="Password">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </TextField>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="28.0" prefWidth="87.0" text="Pay" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets left="110.0" top="30.0" />
+               </VBox.margin>
+            </Button>
+            <Label alignment="CENTER" prefHeight="27.0" prefWidth="300.0" text="Error" textAlignment="CENTER" visible="false">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <Button layoutX="31.0" layoutY="53.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" text="back" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="772.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo2.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
