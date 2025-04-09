@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.banklogin.FinalizeSignupController">
+   <children>
+      <Button fx:id="SignupBtn" layoutX="501.0" layoutY="340.0" mnemonicParsing="false" text="Sign Up" />
+      <Button fx:id="BackBtn" layoutX="41.0" layoutY="31.0" mnemonicParsing="false" onAction="#goBackToSignUp" text="Back" />
+      <TextField fx:id="UsernameField" layoutX="215.0" layoutY="91.0" promptText="Username" />
+      <TextField fx:id="PasswordField" layoutX="216.0" layoutY="155.0" promptText="Password" />
+      <TextField fx:id="ConfirmPassField" layoutX="216.0" layoutY="225.0" promptText="Confirm Password" />
+      <CheckBox fx:id="TermsCheck" layoutX="57.0" layoutY="357.0" mnemonicParsing="false" text="Agree to terms &amp; conditions" />
+   </children>
+</AnchorPane>
