@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.banklogin.SignInController">
+   <children>
+      <TextField fx:id="UsernameField" layoutX="201.0" layoutY="94.0" prefHeight="42.0" prefWidth="177.0" promptText="user name" />
+      <TextField fx:id="PasswordField" layoutX="202.0" layoutY="171.0" prefHeight="42.0" prefWidth="178.0" promptText="password" />
+      <Button fx:id="EnterBtn" layoutX="493.0" layoutY="340.0" mnemonicParsing="false" text="enter" />
+      <Button fx:id="BackupBtn" layoutX="36.0" layoutY="34.0" mnemonicParsing="false" text="backup" />
+      <Button fx:id="SignupBtn" layoutX="79.0" layoutY="340.0" mnemonicParsing="false" onAction="#goToSignUp" text="sign up" />
+      <Button fx:id="ForgetBtn" layoutX="238.0" layoutY="268.0" mnemonicParsing="false" text="forget password" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="520.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.activeLoan">
+    
+        <VBox alignment="TOP_CENTER" layoutX="110.0" layoutY="131.0" prefHeight="360" prefWidth="560" spacing="10">
+
+            <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #000000; -fx-background-color: #A7D9FF; -fx-padding: 8 16; -fx-background-radius: 8;" text="Active Loans" />
+
+            <TableView fx:id="loanTable" prefHeight="320" prefWidth="560" style="-fx-background-color: white; -fx-border-color: #A7D9FF; -fx-border-radius: 8;">
+                <columns>
+                    <TableColumn fx:id="loanIdColumn" prefWidth="100" text="Loan ID" />
+                    <TableColumn fx:id="customerNameColumn" prefWidth="150" text="Customer Name" />
+                    <TableColumn fx:id="amountColumn" prefWidth="100" text="Amount" />
+                    <TableColumn fx:id="dueDateColumn" prefWidth="120" text="Due Date" />
+                    <TableColumn fx:id="statusColumn" prefWidth="90" text="Status" />
+                </columns>
+            </TableView>
+
+        </VBox>
+   <ImageView fitHeight="131.0" fitWidth="184.0" layoutX="642.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@logo2.png" />
+      </image>
+   </ImageView>
+   <Button layoutX="33.0" layoutY="53.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Back" />
+
+</AnchorPane>
