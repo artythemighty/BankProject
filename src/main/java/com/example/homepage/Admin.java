@@ -1,28 +1,19 @@
 package com.example.homepage;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Admin extends User {
-    private String[] admins={"admin","admin1","admin2","admin3","admin4","admin5"};
-    private String adminKey="admin1234";
-    private ArrayList<Costumer> currentCostumers;
-    private ArrayList<Costumer> pendingCostumers;
-    public String[] getAdmins() {
-        return admins;
+    private ArrayList<Customer> currentCustomers;
+
+    Admin(String name, String surname, int dateOfBirth, String gender, String username, String password) {
+        super(name, surname, dateOfBirth, gender, username, password);
     }
-    public String getAdminKey() {
-        return adminKey;
+
+    public void ApproveHesabRequest(HesabRequest request) {
+        request.getRequester().addHesab(new HesabClass(request.getRequester(),Global.accountCount+1000000000,new Date(),0,request.getInterest(),request.getDescription()));
+
+
     }
-    public ArrayList<Costumer> getCurrentCostumers() {
-        return currentCostumers;
-    }
-    public ArrayList<Costumer> getPendingCostumers() {
-        return pendingCostumers;
-    }
-    public void setcurrentCostumers(Costumer requestedCostumer) {
-        currentCostumers.add(requestedCostumer);
-    }
-    public void setpendingCostumers(Costumer requestedCostumer) {
-        pendingCostumers.add(requestedCostumer);
-    }
+
 }

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="431.0" prefWidth="751.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.loanControl">
+   <children>
+      <HBox layoutX="-8.0" layoutY="159.0" prefHeight="114.0" prefWidth="769.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="171.0" text="Marriage">
+               <HBox.margin>
+                  <Insets bottom="30.0" left="40.0" right="30.0" top="40.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="171.0" text="Qars Al-hasaneh">
+               <HBox.margin>
+                  <Insets right="30.0" top="40.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="171.0" text="For purches goods">
+               <HBox.margin>
+                  <Insets right="30.0" top="40.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="171.0" text="Mortgage">
+               <HBox.margin>
+                  <Insets right="30.0" top="40.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="601.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo2.png" />
+         </image>
+      </ImageView>
+      <Hyperlink layoutX="28.0" layoutY="284.0" text="First please read terms and coniditons before applying for a loan." />
+      <Text layoutX="263.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loan Request Page">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <Button layoutX="325.0" layoutY="336.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="112.0" text="Back" />
+   </children>
+
+</AnchorPane>
