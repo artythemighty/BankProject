@@ -4,12 +4,12 @@ import java.util.Date;
 
 public class HesabClass {
     private User owner;
-    private long number;
+    private String number;
     private Date dateCreated;
     private double balance;
     private double interestRate;
     private String description;
-    HesabClass(User owner, long number, Date dateCreated, double balance, double interestRate, String description) {
+    HesabClass(User owner, String number, Date dateCreated, double balance, double interestRate, String description) {
         this.owner = owner;
         this.number = number;
         this.dateCreated = dateCreated;
@@ -29,10 +29,10 @@ public class HesabClass {
     public void setOwner(User owner) {
         this.owner = owner;
     }
-    public long getNumber() {
+    public String getNumber() {
         return number;
     }
-    public void setNumber(int number) {
+    public void setNumber(String number) {
         this.number = number;
     }
     public double getBalance() {

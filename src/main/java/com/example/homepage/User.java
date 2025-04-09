@@ -3,14 +3,14 @@ package com.example.homepage;
 public class User {
     private String name;
     private String surname;
-    private int dateOfBirth;
+    private int age;
     private String gender;
     private String username;
     private String password;
     User(String name, String surname, int dateOfBirth, String gender, String username, String password) {
         this.name = name;
         this.surname = surname;
-        this.dateOfBirth = dateOfBirth;
+        this.age = dateOfBirth;
         this.gender = gender;
         this.username = username;
         this.password = password;
@@ -29,11 +29,11 @@ public class User {
         return surname;
     }
     public void setDateOfBirth(int dateOfBirth){
-        this.dateOfBirth = dateOfBirth;
+        this.age = dateOfBirth;
 
     }
     public int getDateOfBirth(){
-        return dateOfBirth;
+        return age;
     }
     public void setGender(String gender){
         this.gender = gender;

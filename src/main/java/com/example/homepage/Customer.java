@@ -9,6 +9,7 @@ public class Customer extends User {
     private ArrayList<HesabClass> hesabs;
     private ArrayList<Message> userMessages;
     private ArrayList<Requests> myRequests;
+    private ArrayList<LoanClass> loans;
 
     Customer(String name, String surname, int dateOfBirth, String gender, String username, String password) {
         super(name, surname, dateOfBirth, gender, username, password);

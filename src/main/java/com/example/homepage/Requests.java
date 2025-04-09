@@ -5,8 +5,8 @@ import java.util.Date;
 public class Requests {
     private Date requestDate;
     private String description;
-    private long requestId;
-    public Requests(Date requestDate, String description, long requestId) {
+    private int requestId;
+    public Requests(Date requestDate, String description, int requestId) {
         this.requestDate = requestDate;
         this.description = description;
         this.requestId = requestId;
