@@ -8,7 +8,7 @@ public class Global {
     public static User currentUser;
     private static ArrayList<Admin> allAdmins;
     public static int requestCount=0;
-    private static ArrayList<User> allUsers;
+    private static ArrayList<User> allUsers = new ArrayList<>();
     public static ArrayList<User> getAllUsers() {
         return allUsers;
     }

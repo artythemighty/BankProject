@@ -8,10 +8,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 
+import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class welcomePageController implements Initializable {
@@ -28,6 +32,22 @@ public class welcomePageController implements Initializable {
     private Button NextBtn;
     @FXML
     private Button backBtn;
+    @FXML
+    private TextField username;
+    @FXML
+    private TextField password;
+    @FXML
+    private TextField age;
+    @FXML
+    private TextField gender;
+    @FXML
+    private TextField email;
+    @FXML
+    private TextField name;
+    @FXML
+    private TextField phone;
+    @FXML
+    private TextField surname;
 
     public void nextMessage(ActionEvent event) {
         NextBtn.setDisable(true);
@@ -186,6 +206,17 @@ public class welcomePageController implements Initializable {
         checkBtn.setDisable(false);
 
 
+    }
+    public void createUser(ActionEvent event) throws IOException {
+        Global.getAllUsers().add(new User(name.getText(),surname.getText(),Integer.parseInt(age.getText()),gender.getText(),username.getText(),password.getText()));
+        fileHandling.writeToFileUsers(Global.getAllUsers());
+    }
+    public void printuser(ActionEvent event) {
+        System.out.println(Global.getAllUsers().getFirst().getUsername());
+
+    }
+    public void saveUser(ActionEvent event) throws IOException, ClassNotFoundException {
+        Global.setAllUsers(fileHandling.readFromFileUsers());
     }
 
     @Override

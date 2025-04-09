@@ -6,6 +6,7 @@ import java.util.Date;
 
 public class Customer extends User {
     private String email;
+    private String phoneNumber;
     private ArrayList<HesabClass> hesabs;
     private ArrayList<Message> userMessages;
     private ArrayList<Requests> myRequests;
@@ -27,5 +28,18 @@ public class Customer extends User {
     public void addHesab(HesabClass hesab) {
         hesabs.add(hesab);
     }
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public String getEmail() {
+        return email;
+    }
+
 
 }

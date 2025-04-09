@@ -1,16 +1,18 @@
 package com.example.homepage;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     private String name;
     private String surname;
     private int age;
     private String gender;
     private String username;
     private String password;
-    User(String name, String surname, int dateOfBirth, String gender, String username, String password) {
+    User(String name, String surname, int age, String gender, String username, String password) {
         this.name = name;
         this.surname = surname;
-        this.age = dateOfBirth;
+        this.age = age;
         this.gender = gender;
         this.username = username;
         this.password = password;
@@ -28,8 +30,8 @@ public class User {
     public String getSurname(){
         return surname;
     }
-    public void setDateOfBirth(int dateOfBirth){
-        this.age = dateOfBirth;
+    public void setDateOfBirth(int age){
+        this.age = age;
 
     }
     public int getDateOfBirth(){
