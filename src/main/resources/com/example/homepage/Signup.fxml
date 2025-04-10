@@ -27,7 +27,7 @@
             <HBox alignment="CENTER" prefHeight="52.0" prefWidth="357.0">
                <children>
                   <TextField fx:id="age" alignment="CENTER" prefHeight="39.0" prefWidth="96.0" promptText="Age" />
-                  <DatePicker fx:id="birthday" promptText="Birth Date" />
+                  <DatePicker fx:id="birthday" onAction="#setAge" promptText="Birth Date" />
                </children>
             </HBox>
             <TextField fx:id="gender" alignment="CENTER" maxWidth="-Infinity" prefWidth="301.0" promptText="Gender" />
@@ -36,7 +36,7 @@
             <TextField fx:id="username" alignment="CENTER" maxWidth="-Infinity" prefWidth="301.0" promptText="Choose Username" />
             <PasswordField fx:id="password" alignment="CENTER" maxWidth="-Infinity" prefWidth="301.0" promptText="choose password" />
             <PasswordField fx:id="confirmPass" alignment="CENTER" maxWidth="-Infinity" prefWidth="301.0" promptText="confirm password" />
-            <CheckBox mnemonicParsing="false" text="I have read and agreed to the terms and conditions." />
+            <CheckBox fx:id="agreement" mnemonicParsing="false" text="I have read and agreed to the terms and conditions." />
             <Button mnemonicParsing="false" onAction="#createCustomer" text="Button" />
          </children>
          <padding>

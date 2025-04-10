@@ -3,19 +3,20 @@ package com.example.homepage;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.time.LocalDate;
 import java.util.Date;
+import java.util.ResourceBundle;
 
-public class SignUpController {
+public class SignUpController implements Initializable {
     @FXML
     private TextField username;
     @FXML
@@ -34,6 +35,11 @@ public class SignUpController {
     private TextField age;
     @FXML
     private DatePicker birthday;
+    @FXML
+    private CheckBox agreement;
+    @FXML
+    private PasswordField confirmPass;
+
     public void createCustomer(ActionEvent event) throws IOException {
         boolean isUsername=false;
         boolean isPassword=true;
@@ -44,6 +50,8 @@ public class SignUpController {
         boolean isGender=false;
         boolean isAge=true;
         boolean isdate = true;
+        boolean isAgreement=false;
+        boolean isConfirm = false;
         if (!(username.getText().isEmpty())){
             isUsername = true;
         }
@@ -80,17 +88,29 @@ public class SignUpController {
         if (birthday.getValue()==null){
             isdate=false;
         }
-        if (isName&&isLastName&&isGender&&isAge&&isPhone&&isPassword&&isUsername&&isEmail&&isdate){
+        if (agreement.isSelected()){
+            isAgreement = true;
+        }
+        if(password.getText().equals(confirmPass.getText())){
+            isConfirm = true;
+        }
+        if (isName&&isLastName&&isGender&&isAge&&isPhone&&isPassword&&isUsername&&isEmail&&isdate&&isAgreement){
             Global.getAllUsers().add(new Customer(name.getText(),lastName.getText(),Integer.parseInt(age.getText()),gender.getText(),username.getText(),password.getText(),new Date(),birthday.getValue()));
+            fileHandling.writeToFileUsers(Global.getAllUsers());
             System.out.println("Customer created");
         }
     }
+    public void setAge(ActionEvent event) {
+        Date first=new Date();
+        LocalDate date=birthday.getValue();
+        int aged = first.getYear()-date.getYear()+1900;
+        age.setText(String.valueOf(aged));
+    }
 
-
-
-
-
-
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        age.setEditable(false);
+    }
 }
 
 
