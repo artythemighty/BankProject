@@ -144,6 +144,7 @@ public class welcomePageController implements Initializable {
     }
 
     public void backAnimation(ActionEvent event) {
+        signinErrorLabel.setVisible(false);
         FadeTransition messageFADE = new FadeTransition();
         messageFADE.setNode(message);
         messageFADE.setDuration(Duration.millis(1000));
@@ -233,6 +234,7 @@ public class welcomePageController implements Initializable {
                         System.out.println("admin");
 
                     } else if (user instanceof Customer) {
+                        Global.currentUser= (Customer) user;
                         FXMLLoader loader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
                         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                         stage.setResizable(false);

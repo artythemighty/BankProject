@@ -102,16 +102,30 @@
    <bottom>
       <HBox fx:id="bar" prefHeight="112.0" prefWidth="883.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="profileBtn" mnemonicParsing="false" prefHeight="146.0" prefWidth="296.0" stylesheets="@styles.css">
+            <Button fx:id="profileBtn" mnemonicParsing="false" onAction="#switchToProfile" prefHeight="146.0" prefWidth="296.0" stylesheets="@styles.css">
                <graphic>
-                  <ImageView fitHeight="89.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="profileImg" fitHeight="89.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@iconmale.png" />
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Button fx:id="homeBtn" mnemonicParsing="false" prefHeight="135.0" prefWidth="305.0" stylesheets="@styles.css" text="Button" />
-            <Button fx:id="walletBtn" mnemonicParsing="false" prefHeight="112.0" prefWidth="283.0" stylesheets="@styles.css" text="Button" />
+            <Button fx:id="homeBtn" mnemonicParsing="false" prefHeight="146.0" prefWidth="296.0" stylesheets="@styles.css">
+               <graphic>
+                  <ImageView fitHeight="89.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@homeicon.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="walletBtn" mnemonicParsing="false" prefHeight="146.0" prefWidth="296.0" stylesheets="@styles.css">
+               <graphic>
+                  <ImageView fitHeight="89.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@walleticon.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
          </children>
       </HBox>
    </bottom>

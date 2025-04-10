@@ -14,10 +14,11 @@ public class Customer extends User {
     private Date joinDate;
     private LocalDate birthDate;
 
-     Customer(String name, String surname, int dateOfBirth, String gender, String username, String password, Date joinDate, LocalDate birthDate) {
+     Customer(String name, String surname, int dateOfBirth, String gender, String username, String password, Date joinDate, LocalDate birthDate,String phoneNumber) {
         super(name, surname, dateOfBirth, gender, username, password);
         this.joinDate = joinDate;
         this.birthDate = birthDate;
+        this.phoneNumber = phoneNumber;
     }
 
     public void RequestHesab(String description,double interest){
@@ -43,6 +44,18 @@ public class Customer extends User {
     }
     public String getEmail() {
         return email;
+    }
+    public Date getJoinDate() {
+         return joinDate;
+    }
+    public void setJoinDate(Date joinDate) {
+         this.joinDate = joinDate;
+    }
+    public LocalDate getBirthDate() {
+         return birthDate;
+    }
+    public void setBirthDate(LocalDate birthDate) {
+         this.birthDate = birthDate;
     }
 
 

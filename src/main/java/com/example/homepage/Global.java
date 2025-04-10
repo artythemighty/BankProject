@@ -3,7 +3,7 @@ package com.example.homepage;
 import java.util.ArrayList;
 
 public class Global {
-    private static final Owner owner = new Owner("Amirhossein","Hassanpour",19,"male","Owner","owner1234");
+    private static final Owner owner = new Owner("Amirhossein","Hassanpour",19,"male","Owner","owner1234",10000);
     private static ArrayList<Requests> requests;
     private static ArrayList<Customer> allCustomers;
     public static Customer currentUser;

@@ -1,9 +1,15 @@
 package com.example.homepage;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -11,6 +17,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.net.http.WebSocket;
 import java.util.EventListener;
@@ -53,9 +60,15 @@ public class HelloController implements Initializable {
     private ImageView transferImg;
     @FXML
     private ImageView background;
-
+    @FXML
+    private ImageView profileImg;
+    Stage stage;
+    Scene scene;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        if (Global.currentUser.getGender().equalsIgnoreCase("female")) {
+            profileImg.setImage(new Image("D:\\BankProject\\BankProject\\src\\main\\resources\\com\\example\\homepage\\female icon.png"));
+        }
         border.widthProperty().addListener((observable, oldValue, newValue) -> {
             double width = border.getWidth();
             chargeBtn.setPrefWidth(width/8);
@@ -96,5 +109,14 @@ public class HelloController implements Initializable {
             background.setScaleY(height/550);
 
         });
+    }
+    public void switchToProfile(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("profilePage.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Parent root = loader.load();
+        scene = new Scene(root, 883, 558);
+        stage.setScene(scene);
+        stage.setResizable(true);
+        stage.show();
     }
 }

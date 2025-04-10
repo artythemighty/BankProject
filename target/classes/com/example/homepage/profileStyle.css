@@ -136,4 +136,12 @@
 #signInBtn{
     -fx-background-color: #49e6c9;
 }
+#profileLabel{
+    -fx-background-color:#8acbee ;
+    -fx-border-color: white;
+    -fx-border-width: 2;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-font-size: 15;
+}
 

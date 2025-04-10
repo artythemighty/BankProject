@@ -149,8 +149,8 @@ public class SignUpController implements Initializable {
         if (isName&&isLastName&&isGender&&isAge&&isPhone&&isPassword&&isUsername&&isEmail&&isdate&&isAgreement&&isConfirm&&!usernameTaken&&validgender&&validphone&&validpassword){
             captcha.setVisible(true);
             confirmBtn.setDisable(true);
-            backBtn.setDisable(true);
             signupErrorLabel.setVisible(false);
+            backBtn.setDisable(true);
         }
 
         if(isName==false){
@@ -238,6 +238,9 @@ public class SignUpController implements Initializable {
             num2Btn.setVisible(false);
             num3Btn.setVisible(false);
             captchaTitle.setVisible(false);
+            Global.getAllUsers().add(new Customer(name.getText(),lastName.getText(),Integer.parseInt(age.getText()),gender.getText(),username.getText(),password.getText(),new Date(),birthday.getValue(),phone.getText()));
+            fileHandling.writeToFileUsers(Global.getAllUsers());
+            System.out.println("Customer created");
         }
         else
             captchaTitle.setText("Please Try Again!");

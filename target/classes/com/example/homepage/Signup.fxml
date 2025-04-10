@@ -20,7 +20,7 @@
          <image>
             <Image url="@bank%20image.jpg" />
          </image></ImageView>
-      <Button fx:id="BackBtn" layoutX="44.0" layoutY="37.0" mnemonicParsing="false" onAction="#switchToHome" prefHeight="25.0" prefWidth="105.0" text="back">
+      <Button fx:id="backBtn" layoutX="44.0" layoutY="37.0" mnemonicParsing="false" onAction="#switchToHome" prefHeight="25.0" prefWidth="105.0" text="back">
          <stylesheets>
             <URL value="@styles.css" />
             <URL value="@styles.css" />
