@@ -20,6 +20,8 @@ import java.util.Date;
 import java.util.Random;
 import java.util.ResourceBundle;
 
+import static com.example.homepage.fileHandling.readFromFileUsers;
+
 public class SignUpController implements Initializable {
     @FXML
     private TextField username;
@@ -118,7 +120,7 @@ public class SignUpController implements Initializable {
                     }
                 }
 
-        }
+            }
 
         }
         else
@@ -239,7 +241,7 @@ public class SignUpController implements Initializable {
         }
         else
             captchaTitle.setText("Please Try Again!");
-            captchaTitle.setStyle("-fx-text-fill: red;");
+        captchaTitle.setStyle("-fx-text-fill: red;");
 
 
 
@@ -274,5 +276,4 @@ public class SignUpController implements Initializable {
         age.setEditable(false);
     }
 }
-
 
