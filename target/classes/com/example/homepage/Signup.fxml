@@ -55,6 +55,6 @@
       </ImageView>
       <Button id="signInBtn" layoutX="444.0" layoutY="543.0" mnemonicParsing="false" onAction="#createCustomer" prefHeight="44.0" prefWidth="105.0" stylesheets="@profileStyle.css" text="confirm" />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="37.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true" />
-      <Label fx:id="signupErrorLabel" layoutX="442.0" layoutY="618.0" prefHeight="20.0" prefWidth="105.0" text="Label" visible="false" />
+      <Label fx:id="signupErrorLabel" alignment="CENTER" layoutX="347.0" layoutY="620.0" prefHeight="20.0" prefWidth="301.0" text="Label" textAlignment="CENTER" visible="false" />
    </children>
 </AnchorPane>
