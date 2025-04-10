@@ -18,7 +18,7 @@
             </ImageView>
             <HBox layoutX="116.0" layoutY="51.0" prefHeight="317.0" prefWidth="667.0" spacing="70.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="415.0" prefWidth="299.0" text="ADD ADMIN" />
+                  <Button mnemonicParsing="false" onAction="#changeToAddAdmin" prefHeight="415.0" prefWidth="299.0" text="ADD ADMIN" />
                   <Button mnemonicParsing="false" prefHeight="409.0" prefWidth="299.0" text="ADMIN LIST" />
                   <Button layoutX="378.0" layoutY="10.0" mnemonicParsing="false" prefHeight="409.0" prefWidth="299.0" text="Income" />
                </children>

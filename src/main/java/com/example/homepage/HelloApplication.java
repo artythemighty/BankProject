@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class HelloApplication extends Application {
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage) throws IOException, ClassNotFoundException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("welcomePage.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 883, 558);
         scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
@@ -20,6 +20,7 @@ public class HelloApplication extends Application {
         stage.setMinHeight(595);
         stage.setMinWidth(883);
         Global.setOwner();
+        Global.setAllUsers(fileHandling.readFromFileUsers());
 
 
     }

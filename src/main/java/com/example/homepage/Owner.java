@@ -12,6 +12,6 @@ public class Owner extends User{
     }
 
     public void addAdmin(String name, String surname, int dateOfBirth, String gender, String username, String password,Date date) {
-        Global.getAllAdmins().add(new Admin(name, surname, dateOfBirth, gender, username, password,date));
+        Global.getAllAdmins().add(new Admin(name, surname, dateOfBirth, gender, username, password));
     }
 }

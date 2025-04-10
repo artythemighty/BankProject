@@ -206,6 +206,7 @@ public class welcomePageController implements Initializable {
     Stage stage;
     Scene scene;
     public void signIn(ActionEvent event) throws IOException, ClassNotFoundException {
+        ArrayList<User> users = Global.getAllUsers();
         if(username.getText().equals(Global.currentOwner.getUsername())&&password.getText().equals(Global.currentOwner.getPassword())) {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("ownerPage.fxml"));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -215,6 +216,35 @@ public class welcomePageController implements Initializable {
             stage.setScene(scene);
             stage.show();
         }
+        else{
+            for(User user : users) {
+                if(user.getUsername().equals(username.getText())&&user.getPassword().equals(password.getText())) {
+                    if(user instanceof Admin) {
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("adminPage.fxml"));
+                        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                        stage.setResizable(false);
+                        Parent root = loader.load();
+                        scene = new Scene(root, 883, 558);
+                        stage.setScene(scene);
+                        stage.show();
+                        System.out.println("admin");
+
+                    }
+                    else if(user instanceof Customer) {
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
+                        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                        stage.setResizable(false);
+                        Parent root = loader.load();
+                        scene = new Scene(root, 883, 558);
+                        stage.setScene(scene);
+                        stage.show();
+                        System.out.println("customer");
+                    }
+
+                }
+            }
+        }
+
         }
 
     @Override
