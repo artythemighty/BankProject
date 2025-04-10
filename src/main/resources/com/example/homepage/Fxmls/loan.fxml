@@ -9,7 +9,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="431.0" prefWidth="751.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.loanControl">
+<AnchorPane prefHeight="431.0" prefWidth="751.0" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.loanControl">
    <children>
       <HBox layoutX="-8.0" layoutY="159.0" prefHeight="114.0" prefWidth="769.0">
          <children>
@@ -37,7 +37,7 @@
       </HBox>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="601.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@logo2.png" />
+            <Image url="@../logo2.png" />
          </image>
       </ImageView>
       <Hyperlink layoutX="28.0" layoutY="284.0" text="First please read terms and coniditons before applying for a loan." />

@@ -10,11 +10,11 @@
 
 <BorderPane fx:id="border" prefHeight="675.0" prefWidth="883.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.adminController">
    <center>
-      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="883.0" stylesheets="@styles.css" BorderPane.alignment="CENTER">
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="883.0" stylesheets="@../styles.css" BorderPane.alignment="CENTER">
          <children>
             <ImageView fx:id="backgroundImg" fitHeight="675.0" fitWidth="883.0" layoutY="-188.0" opacity="0.87" pickOnBounds="true">
                <image>
-                  <Image url="@home-office-interior-room-working-with-pc_107791-7233.jpg" />
+                  <Image url="@../home-office-interior-room-working-with-pc_107791-7233.jpg" />
                </image>
             </ImageView>
             <HBox fx:id="buttonBox" alignment="TOP_CENTER" layoutX="-454.0" layoutY="66.0" prefHeight="602.0" prefWidth="1791.0" spacing="30.0">
@@ -31,10 +31,10 @@
    <top>
       <HBox fx:id="topBox" spacing="290.0" BorderPane.alignment="TOP_LEFT">
          <children>
-            <Button fx:id="backBtn" mnemonicParsing="false" stylesheets="@styles.css" text="back" />
+            <Button fx:id="backBtn" mnemonicParsing="false" stylesheets="@../styles.css" text="back" />
             <ImageView fx:id="logo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@logo2.png" />
+                  <Image url="@../logo2.png" />
                </image>
             </ImageView>
          </children>

@@ -32,7 +32,7 @@ public class FinalizeSignupController {
     @FXML
     private void goBackToSignUp(javafx.event.ActionEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/banklogin/SignUp.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("com/example/homepage/Signup.fxml"));
             Parent root = fxmlLoader.load();
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
@@ -42,6 +42,20 @@ public class FinalizeSignupController {
             e.printStackTrace();
         }
     }
+    @FXML
+    private void SignIn(javafx.event.ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("com/example/homepage/welcomePage.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Sign Up");
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 
 

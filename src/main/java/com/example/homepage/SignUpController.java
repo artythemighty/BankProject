@@ -1,4 +1,4 @@
-package com.example.banklogin;
+package com.example.homepage;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -32,7 +32,7 @@ public class SignUpController {
     @FXML
     private void goToSignIn(javafx.event.ActionEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/banklogin/SignIn.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("com/example/homepage/welcomePage.fxml"));
             Parent root = fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Sign In");
@@ -49,8 +49,7 @@ public class SignUpController {
     @FXML
     private void goToFinalizeSignup(javafx.event.ActionEvent event) {
         try {
-            // بارگذاری صفحه جدید
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/banklogin/FinalizeSignup.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("com/example/homepage/FinalizeSignup.fxml"));
             Parent root = fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Finalize Sign Up");

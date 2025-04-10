@@ -12,7 +12,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+<<<<<<< Updated upstream
 import javafx.scene.control.PasswordField;
+=======
+<<<<<<< HEAD
+=======
+import javafx.scene.control.PasswordField;
+>>>>>>> b6641865378bf64b9fc15ffdf601beb85eb4226f
+>>>>>>> Stashed changes
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -39,11 +46,29 @@ public class welcomePageController implements Initializable {
     @FXML
     private Button backBtn;
     @FXML
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+    private Button EnterBtn;
+    @FXML
+    private Button ForgetBtn;
+    @FXML
+    private Button signUpBtn;
+    @FXML
+    private TextField UsernameField;
+    @FXML
+    private TextField PasswordField;
+=======
+>>>>>>> Stashed changes
     private TextField username;
     @FXML
     private PasswordField password;
 
 
+<<<<<<< Updated upstream
+=======
+>>>>>>> b6641865378bf64b9fc15ffdf601beb85eb4226f
+>>>>>>> Stashed changes
 
     public void nextMessage(ActionEvent event) {
         NextBtn.setDisable(true);
@@ -206,7 +231,10 @@ public class welcomePageController implements Initializable {
     Stage stage;
     Scene scene;
     public void signIn(ActionEvent event) throws IOException, ClassNotFoundException {
+<<<<<<< Updated upstream
         ArrayList<User> users = Global.getAllUsers();
+=======
+>>>>>>> Stashed changes
         if(username.getText().equals(Global.currentOwner.getUsername())&&password.getText().equals(Global.currentOwner.getPassword())) {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("ownerPage.fxml"));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -216,6 +244,7 @@ public class welcomePageController implements Initializable {
             stage.setScene(scene);
             stage.show();
         }
+<<<<<<< Updated upstream
         else{
             for(User user : users) {
                 if(user.getUsername().equals(username.getText())&&user.getPassword().equals(password.getText())) {
@@ -245,10 +274,45 @@ public class welcomePageController implements Initializable {
             }
         }
 
+=======
+>>>>>>> Stashed changes
         }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+    }
+
+    @FXML
+    private void enter(javafx.event.ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("com/example/homepage/hello-view.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Sign Up");
+            stage.setScene(new Scene(root));
+            stage.show();
+            Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            currentStage.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    private void goToSignUp(javafx.event.ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("com/example/homepage/Signup.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Sign Up");
+            stage.setScene(new Scene(root));
+            stage.show();
+            Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            currentStage.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
