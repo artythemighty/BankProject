@@ -34,7 +34,7 @@
             <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                <children>
                   <Label text="Don't have an account?" />
-                  <Hyperlink text="SignUp!" />
+                  <Hyperlink onAction="#switchToSignUp" text="SignUp!" />
                </children>
             </HBox>
          </children></VBox>

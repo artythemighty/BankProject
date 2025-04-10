@@ -7,7 +7,7 @@ import java.util.Random;
 public class Admin extends User {
     private ArrayList<Customer> currentCustomers;
 
-    Admin(String name, String surname, int dateOfBirth, String gender, String username, String password,Date date) {
+    Admin(String name, String surname, int dateOfBirth, String gender, String username, String password) {
         super(name, surname, dateOfBirth, gender, username, password);
     }
 

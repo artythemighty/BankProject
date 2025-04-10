@@ -1,67 +1,94 @@
 package com.example.homepage;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Date;
 
 public class SignUpController {
     @FXML
-    private TextField NameField;
+    private TextField username;
     @FXML
-    private TextField PhoneNumberField;
+    private PasswordField password;
     @FXML
-    private TextField IDNumberField;
+    private TextField email;
     @FXML
-    private TextField CardNumberField;
+    private TextField name;
     @FXML
-    private TextField CVV2Field;
+    private TextField phone;
     @FXML
-    private TextField EmailField;
+    private TextField lastName;
     @FXML
-    private Button ConfirmButton;
+    private TextField gender;
     @FXML
-    private Button BackBtn;
+    private TextField age;
+    @FXML
+    private DatePicker birthday;
+    public void createCustomer(ActionEvent event) throws IOException {
+        boolean isUsername=false;
+        boolean isPassword=true;
+        boolean isEmail=true;
+        boolean isName= true;
+        boolean isLastName=true;
+        boolean isPhone=false;
+        boolean isGender=false;
+        boolean isAge=true;
+        boolean isdate = true;
+        if (!(username.getText().isEmpty())){
+            isUsername = true;
+        }
+        for(int i = 0; i<age.getLength();i++){
+            if (!(age.getText().charAt(i)>='0'&&age.getText().charAt(i)<='9')){
+                isAge = false;
+            }
 
-    @FXML
-    private void goToSignIn(javafx.event.ActionEvent event) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("com/example/homepage/welcomePage.fxml"));
-            Parent root = fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setTitle("Sign In");
-            stage.setScene(new Scene(root));
-            stage.show();
-            Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            currentStage.close();
 
-        } catch (IOException e) {
-            e.printStackTrace();
+        }
+        if (gender.getText().equals("male")||gender.getText().equals("female")){
+            isGender = true;
+        }
+        if (name.getText().isEmpty()) {
+            isName = false;
+        }
+        if (phone.getText().length()==12){
+            for (int i = 0;i<phone.getLength();i++){
+                if (phone.getText().charAt(i)>='0'&&phone.getText().charAt(i)<='9'){
+                    isPhone = true;
+                }
+            }
+        }
+        else
+            isPhone = false;
+        if (lastName.getText().isEmpty()){
+            isLastName = false;
+
+
+        }
+        if (password.getText().length()!=8){
+            isPassword = false;
+        }
+        if (birthday.getValue()==null){
+            isdate=false;
+        }
+        if (isName&&isLastName&&isGender&&isAge&&isPhone&&isPassword&&isUsername&&isEmail&&isdate){
+            Global.getAllUsers().add(new Customer(name.getText(),lastName.getText(),Integer.parseInt(age.getText()),gender.getText(),username.getText(),password.getText(),new Date(),birthday.getValue()));
+            System.out.println("Customer created");
         }
     }
 
-    @FXML
-    private void goToFinalizeSignup(javafx.event.ActionEvent event) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("com/example/homepage/FinalizeSignup.fxml"));
-            Parent root = fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setTitle("Finalize Sign Up");
-            stage.setScene(new Scene(root));
-            stage.show();
-            Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            currentStage.close();
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+
+
 
 
 }

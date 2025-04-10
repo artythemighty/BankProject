@@ -1,7 +1,7 @@
 package com.example.homepage;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 
 public class Customer extends User {
@@ -12,9 +12,9 @@ public class Customer extends User {
     private ArrayList<Requests> myRequests;
     private ArrayList<LoanClass> loans;
     private Date joinDate;
-    private Date birthDate;
+    private LocalDate birthDate;
 
-    Customer(String name, String surname, int dateOfBirth, String gender, String username, String password,Date joinDate,Date birthDate) {
+    Customer(String name, String surname, int dateOfBirth, String gender, String username, String password, Date joinDate, LocalDate birthDate) {
         super(name, surname, dateOfBirth, gender, username, password);
         this.joinDate = joinDate;
         this.birthDate = birthDate;
