@@ -16,6 +16,8 @@ import java.time.LocalDate;
 import java.util.Date;
 import java.util.ResourceBundle;
 
+import static com.example.homepage.fileHandling.readFromFileUsers;
+
 public class SignUpController implements Initializable {
     @FXML
     private TextField username;
@@ -42,7 +44,7 @@ public class SignUpController implements Initializable {
     @FXML
     private Label signupErrorLabel;
 
-    public void createCustomer(ActionEvent event) throws IOException {
+    public void createCustomer(ActionEvent event) throws IOException, ClassNotFoundException {
         boolean isUsername=false;
         boolean isPassword=true;
         boolean isEmail=true;
@@ -84,9 +86,9 @@ public class SignUpController implements Initializable {
 
 
         }
-        if (password.getText().length()!=8){
-            isPassword = false;
-        }
+//        if (password.getText().length()!=8){
+//            isPassword = false;
+//        }
         if (birthday.getValue()==null){
             isdate=false;
         }
@@ -143,6 +145,19 @@ public class SignUpController implements Initializable {
             signupErrorLabel.setText("Password does not match");
             signupErrorLabel.setVisible(true);
             signupErrorLabel.setStyle("-fx-text-fill: red;");
+            return;
+        }
+        if(password.getLength()<8){
+            signupErrorLabel.setVisible(true);
+            signupErrorLabel.setText("Password must be at least 8 characters");
+            signupErrorLabel.setStyle("-fx-text-fill: red;");
+            return;
+        }
+        if(username.getText().equals(readFromFileUsers())){
+            signupErrorLabel.setVisible(true);
+            signupErrorLabel.setText("Username is already taken");
+            signupErrorLabel.setStyle("-fx-text-fill: red;");
+            return;
         }
     }
     public void setAge(ActionEvent event) {

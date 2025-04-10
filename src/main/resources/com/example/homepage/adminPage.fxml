@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
@@ -8,7 +13,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 
-<BorderPane fx:id="border" prefHeight="675.0" prefWidth="883.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.adminController">
+<BorderPane fx:id="border" prefHeight="673.0" prefWidth="883.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.adminController">
    <center>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="883.0" stylesheets="@styles.css" BorderPane.alignment="CENTER">
          <children>
@@ -17,12 +22,40 @@
                   <Image url="@home-office-interior-room-working-with-pc_107791-7233.jpg" />
                </image>
             </ImageView>
-            <HBox fx:id="buttonBox" alignment="TOP_CENTER" layoutX="-454.0" layoutY="66.0" prefHeight="602.0" prefWidth="1791.0" spacing="30.0">
+            <HBox fx:id="buttonBox" alignment="TOP_CENTER" layoutX="50.0" layoutY="154.0" prefHeight="142.0" prefWidth="757.0" spacing="30.0">
                <children>
-                  <Button fx:id="currentBtn" mnemonicParsing="false" prefHeight="312.0" prefWidth="182.0" text="current costumers" />
-                  <Button fx:id="pendingBtn" mnemonicParsing="false" prefHeight="312.0" prefWidth="182.0" text="pending request" />
-                  <Button fx:id="activeLoansBtn" mnemonicParsing="false" prefHeight="312.0" prefWidth="182.0" text="active loans" />
-                  <Button fx:id="adminInfoBtn" layoutX="252.0" layoutY="33.0" mnemonicParsing="false" prefHeight="312.0" prefWidth="182.0" text="admin info" />
+                  <Button fx:id="currentBtn" mnemonicParsing="false" prefHeight="119.0" prefWidth="151.0" stylesheets="@styles.css">
+                     <graphic>
+                        <ImageView fitHeight="89.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@current.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="pendingBtn" mnemonicParsing="false" prefHeight="103.0" prefWidth="135.0" stylesheets="@styles.css">
+                     <graphic>
+                        <ImageView fitHeight="89.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@pendingicon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="activeLoansBtn" mnemonicParsing="false" prefHeight="83.0" prefWidth="138.0" stylesheets="@styles.css">
+                     <graphic>
+                        <ImageView fitHeight="89.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@activeloanicon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="adminInfoBtn" mnemonicParsing="false" prefHeight="110.0" prefWidth="128.0" stylesheets="@styles.css">
+                     <graphic>
+                        <ImageView fitHeight="89.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@admininformation.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
                </children>
             </HBox>
          </children>
@@ -31,8 +64,8 @@
    <top>
       <HBox fx:id="topBox" spacing="290.0" BorderPane.alignment="TOP_LEFT">
          <children>
-            <Button fx:id="backBtn" mnemonicParsing="false" stylesheets="@styles.css" text="back" />
-            <ImageView fx:id="logo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+            <Button fx:id="backBtn" mnemonicParsing="false" prefHeight="44.0" prefWidth="67.0" stylesheets="@styles.css" text="back" />
+            <ImageView fx:id="logo" fitHeight="150.0" fitWidth="137.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@logo2.png" />
                </image>

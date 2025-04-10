@@ -24,6 +24,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.ResourceBundle;
 
+import static com.example.homepage.fileHandling.readFromFileUsers;
+
 public class welcomePageController implements Initializable {
     String[] messages = {"EVEN SAFER THAN REAL LIFE BANKS!", "A USER FRIENDLY ENVIRONMENT", "REASONABLE LOANS THAT WON'T BURN THROUGH YOUR POCKET!"};
     int currentMessage = 0;
@@ -42,6 +44,8 @@ public class welcomePageController implements Initializable {
     private TextField username;
     @FXML
     private PasswordField password;
+    @FXML
+    private Label signinErrorLabel;
 
 
     public void nextMessage(ActionEvent event) {
@@ -242,7 +246,28 @@ public class welcomePageController implements Initializable {
                 }
             }
         }
-
+        if (username.getText().isEmpty()){
+            signinErrorLabel.setVisible(true);
+            signinErrorLabel.setText("Please enter a username");
+            signinErrorLabel.setStyle("-fx-text-fill: red");
+        }
+        if (password.getText().isEmpty()){
+            signinErrorLabel.setVisible(true);
+            signinErrorLabel.setText("Please enter a password");
+            signinErrorLabel.setStyle("-fx-text-fill: red");
+        }
+        if (username.getText().equals(readFromFileUsers())&&!(password.getText().equals(readFromFileUsers()))) {
+            signinErrorLabel.setVisible(true);
+            signinErrorLabel.setText("Passwords do not match");
+            signinErrorLabel.setStyle("-fx-text-fill: red");
+            return;
+        }
+        if (!(username.getText().equals(readFromFileUsers()))){
+            signinErrorLabel.setVisible(true);
+            signinErrorLabel.setText("Please enter a valid username");
+            signinErrorLabel.setStyle("-fx-text-fill: red");
+            return;
+        }
 
     }
     public void switchToSignUp(ActionEvent event) throws IOException, ClassNotFoundException {
