@@ -76,7 +76,7 @@
                   <Insets left="10.0" />
                </padding>
             </VBox>
-            <Button id="logOutBtn" fx:id="logOutBtn" layoutX="398.0" layoutY="500.0" mnemonicParsing="false" text="LOG OUT" />
+            <Button id="logOutBtn" fx:id="logOutBtn" layoutX="398.0" layoutY="500.0" mnemonicParsing="false" onAction="#signOut" text="LOG OUT" />
          </children>
       </AnchorPane>
    </center>
@@ -99,7 +99,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="homeBtn" mnemonicParsing="false" prefHeight="146.0" prefWidth="296.0" stylesheets="@styles.css">
+            <Button fx:id="homeBtn" mnemonicParsing="false" onAction="#switchToHomepage" prefHeight="146.0" prefWidth="296.0" stylesheets="@styles.css">
                <graphic>
                   <ImageView fitHeight="89.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
                      <image>

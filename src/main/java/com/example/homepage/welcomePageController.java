@@ -14,6 +14,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -46,6 +47,8 @@ public class welcomePageController implements Initializable {
     private PasswordField password;
     @FXML
     private Label signinErrorLabel;
+    @FXML
+    private ImageView logo;
 
 
     public void nextMessage(ActionEvent event) {
@@ -113,7 +116,12 @@ public class welcomePageController implements Initializable {
         backBtnFade.setFromValue(0);
         backBtnFade.setToValue(1);
         backBtnFade.play();
-
+        FadeTransition logoFade = new FadeTransition();
+        logoFade.setNode(logo);
+        logoFade.setDuration(Duration.millis(1000));
+        logoFade.setFromValue(1);
+        logoFade.setToValue(0);
+        logoFade.play();
         TranslateTransition boxTransition = new TranslateTransition();
         boxTransition.setDuration(Duration.millis(1000));
         boxTransition.setNode(signInBox);
@@ -139,6 +147,11 @@ public class welcomePageController implements Initializable {
         backBtnTransition.setNode(backBtn);
         backBtnTransition.setByX(-650);
         backBtnTransition.play();
+        TranslateTransition logoTransition = new TranslateTransition();
+        logoTransition.setDuration(Duration.millis(1000));
+        logoTransition.setNode(logo);
+        logoTransition.setByX(-755);
+        logoTransition.play();
         checkBtn.setDisable(true);
 
     }
@@ -175,6 +188,12 @@ public class welcomePageController implements Initializable {
         backBtnFade.setFromValue(1);
         backBtnFade.setToValue(0);
         backBtnFade.play();
+        FadeTransition logoFade = new FadeTransition();
+        logoFade.setNode(logo);
+        logoFade.setDuration(Duration.millis(1000));
+        logoFade.setFromValue(0);
+        logoFade.setToValue(1);
+        logoFade.play();
 
         TranslateTransition boxTransition = new TranslateTransition();
         boxTransition.setDuration(Duration.millis(1000));
@@ -201,6 +220,11 @@ public class welcomePageController implements Initializable {
         backBtnTransition.setNode(backBtn);
         backBtnTransition.setByX(650);
         backBtnTransition.play();
+        TranslateTransition logoTransition = new TranslateTransition();
+        logoTransition.setDuration(Duration.millis(1000));
+        logoTransition.setNode(logo);
+        logoTransition.setByX(755);
+        logoTransition.play();
         backBtn.setDisable(true);
         checkBtn.setDisable(false);
 
