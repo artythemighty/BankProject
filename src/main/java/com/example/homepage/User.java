@@ -10,15 +10,13 @@ public class User implements Serializable {
     private String gender;
     private String username;
     private String password;
-    private Date dateJoined;
-    User(String name, String surname, int age, String gender, String username, String password, Date dateJoined) {
+    User(String name, String surname, int age, String gender, String username, String password) {
         this.name = name;
         this.surname = surname;
         this.age = age;
         this.gender = gender;
         this.username = username;
         this.password = password;
-        this.dateJoined = dateJoined;
 
     }
     public void setName(String name){
@@ -59,11 +57,4 @@ public class User implements Serializable {
     public String getPassword(){
         return password;
     }
-    public void setDateJoined(Date dateJoined){
-        this.dateJoined = dateJoined;
-    }
-    public Date getDateJoined(){
-        return dateJoined;
-    }
-
 }

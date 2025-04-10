@@ -12,8 +12,8 @@ public class Customer extends User {
     private ArrayList<Requests> myRequests;
     private ArrayList<LoanClass> loans;
 
-    Customer(String name, String surname, int dateOfBirth, String gender, String username, String password,Date joined) {
-        super(name, surname, dateOfBirth, gender, username, password,joined);
+    Customer(String name, String surname, int dateOfBirth, String gender, String username, String password) {
+        super(name, surname, dateOfBirth, gender, username, password);
     }
 
     public void RequestHesab(String description,double interest){

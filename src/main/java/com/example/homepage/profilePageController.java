@@ -46,6 +46,5 @@ public class profilePageController implements Initializable {
         gender.setText(Global.currentUser.getGender());
         email.setText(Global.currentUser.getEmail());
         phone.setText(Global.currentUser.getPhoneNumber());
-        date.setText(String.valueOf(Global.currentUser.getDateJoined()));
     }
 }

@@ -41,19 +41,8 @@ public class welcomePageController implements Initializable {
     @FXML
     private TextField username;
     @FXML
-    private TextField password;
-    @FXML
-    private TextField age;
-    @FXML
-    private TextField gender;
-    @FXML
-    private TextField email;
-    @FXML
-    private TextField name;
-    @FXML
-    private TextField phone;
-    @FXML
-    private TextField surname;
+    private PasswordField password;
+
 
 
     public void nextMessage(ActionEvent event) {
@@ -91,7 +80,7 @@ public class welcomePageController implements Initializable {
 
 
     }
-    public void signInAnimation(ActionEvent event) {
+    public void signInAnimation(ActionEvent event) throws IOException {
         backBtn.setDisable(false);
         FadeTransition messageFADE = new FadeTransition();
         messageFADE.setNode(message);
@@ -216,34 +205,20 @@ public class welcomePageController implements Initializable {
     }
     Stage stage;
     Scene scene;
-    public void createUser(ActionEvent event) throws IOException {
-        Global.getAllUsers().add(new Customer(name.getText(),surname.getText(),Integer.parseInt(age.getText()),gender.getText(),username.getText(),password.getText(),new Date()));
-        fileHandling.writeToFileUsers(Global.getAllUsers());
-    }
-    public void printuser(ActionEvent event) {
-        System.out.println(Global.getAllUsers().getFirst().getUsername());
-
-    }
-    public void saveUser(ActionEvent event) throws IOException, ClassNotFoundException {
-        Global.setAllUsers(fileHandling.readFromFileUsers());
-    }
     public void signIn(ActionEvent event) throws IOException, ClassNotFoundException {
-        ArrayList<User> users = fileHandling.readFromFileUsers();
-        for (User user : users) {
-            if (user.getUsername().equals(username.getText()) && user.getPassword().equals(password.getText())) {
-                Global.currentUser = (Customer) user;
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("profilePage.fxml"));
-                stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                stage.setResizable(false);
-                Parent root = loader.load();
-                scene = new Scene(root, 1080, 750);
-                stage.setScene(scene);
-                stage.show();
-            }
+        if(username.getText().equals(Global.currentOwner.getUsername())&&password.getText().equals(Global.currentOwner.getPassword())) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("ownerPage.fxml"));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setResizable(false);
+            Parent root = loader.load();
+            scene = new Scene(root, 883, 558);
+            stage.setScene(scene);
+            stage.show();
         }
-    }
+        }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
     }
 }

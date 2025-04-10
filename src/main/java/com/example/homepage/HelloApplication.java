@@ -19,6 +19,7 @@ public class HelloApplication extends Application {
         stage.setResizable(false);
         stage.setMinHeight(595);
         stage.setMinWidth(883);
+        Global.setOwner();
 
 
     }
