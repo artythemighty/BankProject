@@ -39,6 +39,8 @@ public class SignUpController implements Initializable {
     private CheckBox agreement;
     @FXML
     private PasswordField confirmPass;
+    @FXML
+    private Label signupErrorLabel;
 
     public void createCustomer(ActionEvent event) throws IOException {
         boolean isUsername=false;
@@ -98,6 +100,49 @@ public class SignUpController implements Initializable {
             Global.getAllUsers().add(new Customer(name.getText(),lastName.getText(),Integer.parseInt(age.getText()),gender.getText(),username.getText(),password.getText(),new Date(),birthday.getValue()));
             fileHandling.writeToFileUsers(Global.getAllUsers());
             System.out.println("Customer created");
+        }
+
+        if(isName==false){
+            signupErrorLabel.setText("Name is required");
+            signupErrorLabel.setVisible(true);
+            signupErrorLabel.setStyle("-fx-text-fill: red;");
+        } else if (isLastName==false) {
+            signupErrorLabel.setText("Last name is required");
+            signupErrorLabel.setVisible(true);
+            signupErrorLabel.setStyle("-fx-text-fill: red;");
+        } else if (isAge==false) {
+            signupErrorLabel.setText("Age is required");
+            signupErrorLabel.setVisible(true);
+            signupErrorLabel.setStyle("-fx-text-fill: red;");
+        }else if (isdate==false) {
+            signupErrorLabel.setText("Date is required");
+            signupErrorLabel.setVisible(true);
+            signupErrorLabel.setStyle("-fx-text-fill: red;");
+        }else if (isGender==false) {
+            signupErrorLabel.setText("Gender is required");
+            signupErrorLabel.setVisible(true);
+            signupErrorLabel.setStyle("-fx-text-fill: red;");
+        } else if (isPhone==false) {
+            signupErrorLabel.setText("Phone is required");
+            signupErrorLabel.setVisible(true);
+            signupErrorLabel.setStyle("-fx-text-fill: red;");
+        } else if (isUsername==false) {
+            signupErrorLabel.setText("Username is required");
+            signupErrorLabel.setVisible(true);
+            signupErrorLabel.setStyle("-fx-text-fill: red;");
+        }else if(isPassword==false){
+            signupErrorLabel.setText("Password is required");
+            signupErrorLabel.setVisible(true);
+            signupErrorLabel.setStyle("-fx-text-fill: red;");
+        } else if (isConfirm==false) {
+            signupErrorLabel.setText("Confirm Password is required");
+            signupErrorLabel.setVisible(true);
+            signupErrorLabel.setStyle("-fx-text-fill: red;");
+        }
+        if (!(password.getText().equals(confirmPass.getText()))){
+            signupErrorLabel.setText("Password does not match");
+            signupErrorLabel.setVisible(true);
+            signupErrorLabel.setStyle("-fx-text-fill: red;");
         }
     }
     public void setAge(ActionEvent event) {

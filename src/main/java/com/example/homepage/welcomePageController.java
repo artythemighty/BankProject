@@ -248,7 +248,7 @@ public class welcomePageController implements Initializable {
     public void switchToSignUp(ActionEvent event) throws IOException, ClassNotFoundException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Signup.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setResizable(false);
+        //stage.setResizable(false);
         Parent root = loader.load();
         scene = new Scene(root, 883, 558);
         stage.setScene(scene);

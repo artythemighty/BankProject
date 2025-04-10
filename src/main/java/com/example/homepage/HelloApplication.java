@@ -16,7 +16,7 @@ public class HelloApplication extends Application {
         stage.setTitle("HomePage");
         stage.setScene(scene);
         stage.show();
-        stage.setResizable(false);
+       //stage.setResizable(false);
         stage.setMinHeight(595);
         stage.setMinWidth(883);
         Global.setOwner();

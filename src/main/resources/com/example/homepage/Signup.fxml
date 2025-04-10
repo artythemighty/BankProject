@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
@@ -13,14 +19,14 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="558.0" prefWidth="883.0" style="-fx-background-color: #D0F1FF;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.SignUpController">
+<AnchorPane prefHeight="665.0" prefWidth="993.0" style="-fx-background-color: #D0F1FF;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.SignUpController">
    <children>
       <Button fx:id="BackBtn" layoutX="44.0" layoutY="37.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" text="back">
          <stylesheets>
             <URL value="@styles.css" />
             <URL value="@styles.css" />
          </stylesheets></Button>
-      <VBox id="signInBox" accessibleText="g" alignment="CENTER" layoutX="267.0" layoutY="65.0" prefHeight="461.0" prefWidth="400.0" scaleY="0.9" spacing="10.0" stylesheets="@styles.css">
+      <VBox id="signInBox" accessibleText="g" alignment="CENTER" layoutX="297.0" layoutY="72.0" prefHeight="461.0" prefWidth="400.0" scaleY="0.9" spacing="10.0" stylesheets="@styles.css">
          <children>
             <TextField fx:id="name" alignment="CENTER" maxWidth="-Infinity" prefHeight="39.0" prefWidth="301.0" promptText="Name" />
             <TextField fx:id="lastName" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="301.0" promptText="Last Name" />
@@ -42,12 +48,13 @@
             <Insets bottom="10.0" top="10.0" />
          </padding>
       </VBox>
-      <ImageView fitHeight="105.0" fitWidth="116.0" layoutX="415.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="105.0" fitWidth="116.0" layoutX="437.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@logo2-removebg-preview.png" />
          </image>
       </ImageView>
-      <Button id="signInBtn" layoutX="415.0" layoutY="514.0" mnemonicParsing="false" onAction="#createCustomer" prefHeight="44.0" prefWidth="105.0" stylesheets="@profileStyle.css" text="confirm" />
+      <Button id="signInBtn" layoutX="444.0" layoutY="543.0" mnemonicParsing="false" onAction="#createCustomer" prefHeight="44.0" prefWidth="105.0" stylesheets="@profileStyle.css" text="confirm" />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="37.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="signupErrorLabel" alignment="CENTER" layoutX="347.0" layoutY="620.0" prefHeight="20.0" prefWidth="301.0" text="Label" textAlignment="CENTER" visible="false" />
    </children>
 </AnchorPane>
