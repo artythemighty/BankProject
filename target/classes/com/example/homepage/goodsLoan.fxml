@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="524.0" prefWidth="777.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.mortgagePage">
+    <VBox alignment="TOP_CENTER" layoutX="132.0" layoutY="75.0" prefHeight="431.0" prefWidth="480.0" spacing="15">
+
+        <Label prefHeight="52.0" prefWidth="368.0" style="-fx-font-size: 22px; -fx-font-weight: bold;                       -fx-background-color: #A7D9FF; -fx-padding: 10 20;                       -fx-background-radius: 10; -fx-text-fill: black;" text="Purches goods Loan Request" />
+
+        <VBox prefWidth="380" spacing="12">
+
+            <Label text="Full Name:" />
+            <TextField fx:id="nameField" promptText="Enter your full name" />
+
+            <Label text="Loan Amount: $" />
+            <Slider fx:id="amountSlider" blockIncrement="100" majorTickUnit="2000" max="10000" min="100" minorTickCount="3" showTickLabels="true" showTickMarks="true" value="1000" />
+            <Label fx:id="amountLabel" style="-fx-font-weight: bold;" text="1000$" />
+
+
+            <Label text="Loan Term (Months):" />
+            <Slider fx:id="termSlider" blockIncrement="6" majorTickUnit="12" max="60" min="6" minorTickCount="1" showTickLabels="true" showTickMarks="true" value="12" />
+            <Label fx:id="termLabel" style="-fx-font-weight: bold;" text="12 months" />
+        </VBox>
+
+        <Button style="-fx-background-color: #A7D9FF; -fx-text-fill: black; -fx-font-weight: bold;                        -fx-padding: 8 16; -fx-background-radius: 8;" text="Submit Request" />
+      <Label text="Request has been sent" visible="false" />
+
+    </VBox>
+   <Button layoutX="14.0" layoutY="50.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Back" />
+   <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="627.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@logo2.png" />
+      </image>
+   </ImageView>
+</AnchorPane>

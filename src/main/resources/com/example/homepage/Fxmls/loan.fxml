@@ -41,12 +41,13 @@
          </image>
       </ImageView>
       <Hyperlink layoutX="28.0" layoutY="284.0" text="First please read terms and coniditons before applying for a loan." />
-      <Text layoutX="263.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loan Request Page">
+      <Text layoutX="308.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loan Page">
          <font>
             <Font size="28.0" />
          </font>
       </Text>
-      <Button layoutX="325.0" layoutY="336.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="112.0" text="Back" />
+      <Button layoutX="48.0" layoutY="57.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="112.0" text="Back" />
+      <Button layoutX="296.0" layoutY="342.0" mnemonicParsing="false" text="Installment payment" />
    </children>
 
 </AnchorPane>

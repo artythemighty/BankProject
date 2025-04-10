@@ -11,9 +11,13 @@ public class Customer extends User {
     private ArrayList<Message> userMessages;
     private ArrayList<Requests> myRequests;
     private ArrayList<LoanClass> loans;
+    private Date joinDate;
+    private Date birthDate;
 
-    Customer(String name, String surname, int dateOfBirth, String gender, String username, String password) {
+    Customer(String name, String surname, int dateOfBirth, String gender, String username, String password,Date joinDate,Date birthDate) {
         super(name, surname, dateOfBirth, gender, username, password);
+        this.joinDate = joinDate;
+        this.birthDate = birthDate;
     }
 
     public void RequestHesab(String description,double interest){
