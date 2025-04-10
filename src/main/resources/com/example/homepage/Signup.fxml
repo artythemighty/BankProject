@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.net.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -19,9 +14,13 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="665.0" prefWidth="993.0" style="-fx-background-color: #D0F1FF;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.SignUpController">
+<AnchorPane prefHeight="665.0" prefWidth="993.0" style="-fx-background-color: #D0F1FF;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.SignUpController">
    <children>
-      <Button fx:id="BackBtn" layoutX="44.0" layoutY="37.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" text="back">
+      <ImageView fitHeight="665.0" fitWidth="993.0" layoutX="-2.0" opacity="0.87" pickOnBounds="true">
+         <image>
+            <Image url="@bank%20image.jpg" />
+         </image></ImageView>
+      <Button fx:id="BackBtn" layoutX="44.0" layoutY="37.0" mnemonicParsing="false" onAction="#switchToHome" prefHeight="25.0" prefWidth="105.0" text="back">
          <stylesheets>
             <URL value="@styles.css" />
             <URL value="@styles.css" />
@@ -53,8 +52,21 @@
             <Image url="@logo2-removebg-preview.png" />
          </image>
       </ImageView>
-      <Button id="signInBtn" layoutX="444.0" layoutY="543.0" mnemonicParsing="false" onAction="#createCustomer" prefHeight="44.0" prefWidth="105.0" stylesheets="@profileStyle.css" text="confirm" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="37.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true" />
+      <Button id="signInBtn" fx:id="confirmBtn" layoutX="428.0" layoutY="570.0" mnemonicParsing="false" onAction="#createCustomer" prefHeight="44.0" prefWidth="138.0" stylesheets="@profileStyle.css" text="confirm" />
       <Label fx:id="signupErrorLabel" alignment="CENTER" layoutX="347.0" layoutY="620.0" prefHeight="20.0" prefWidth="301.0" text="Label" textAlignment="CENTER" visible="false" />
+      <AnchorPane fx:id="captcha" layoutX="265.0" layoutY="152.0" prefHeight="342.0" prefWidth="459.0" style="-fx-background-color: #6ea0f5; -fx-background-radius: 10; -fx-border-color: white; -fx-border-radius: 10; -fx-border-width: 4;" stylesheets="@styles.css">
+         <children>
+            <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="121.0" prefHeight="100.0" prefWidth="417.0" spacing="70.0">
+               <children>
+                  <Button fx:id="num1Btn" mnemonicParsing="false" onAction="#captcha" prefHeight="78.0" prefWidth="91.0" text="Button" />
+                  <Button fx:id="num2Btn" mnemonicParsing="false" onAction="#captcha" prefHeight="78.0" prefWidth="91.0" text="Button" />
+                  <Button fx:id="num3Btn" mnemonicParsing="false" onAction="#captcha" prefHeight="78.0" prefWidth="91.0" text="Button" />
+               </children>
+            </HBox>
+            <Label fx:id="captchaTitle" alignment="CENTER" layoutX="119.0" layoutY="19.0" prefHeight="20.0" prefWidth="228.0" scaleX="1.2" scaleY="1.2" stylesheets="@profileStyle.css" text="Please choose the biggest number" textAlignment="CENTER" />
+            <Label fx:id="created" layoutX="173.0" layoutY="140.0" scaleX="2.0" scaleY="2.0" stylesheets="@profileStyle.css" text="Account Created!" visible="false" />
+            <Button fx:id="homeBtn" layoutX="172.0" layoutY="258.0" mnemonicParsing="false" onAction="#switchToHome" text="Back to home" visible="false" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
