@@ -1,4 +1,4 @@
-package com.example.banklogin;
+package com.example.homepage;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

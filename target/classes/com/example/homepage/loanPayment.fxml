@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+
+<AnchorPane prefHeight="555.0" prefWidth="743.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.loanPaymentControll">
+    <VBox alignment="TOP_CENTER" layoutX="152.0" layoutY="148.0" prefHeight="360" prefWidth="440" spacing="15">
+
+        <Label style="-fx-font-size: 22px; -fx-font-weight: bold;                       -fx-background-color: #A7D9FF; -fx-padding: 10 20;                       -fx-background-radius: 10; -fx-text-fill: black;" text="Loan Installment Payment" />
+
+        <VBox prefWidth="380" spacing="12">
+
+            <Label text="Loan ID:" />
+            <TextField fx:id="loanIdField" promptText="Enter your loan ID" />
+
+            <Label text="Next Due Date:" />
+            <Label fx:id="dueDateLabel" style="-fx-font-weight: bold;" text="2025-05-01" />
+
+            <Label text="Amount Due:" />
+            <Label fx:id="amountDueLabel" style="-fx-font-weight: bold;" text="250$" />
+
+        </VBox>
+
+        <Button style="-fx-background-color: #A7D9FF; -fx-text-fill: black; -fx-font-weight: bold;                        -fx-padding: 8 16; -fx-background-radius: 8;" text="Pay Now" />
+
+    </VBox>
+   <Button layoutX="14.0" layoutY="49.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="back" />
+   <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="592.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@logo2.png" />
+      </image>
+   </ImageView>
+</AnchorPane>
