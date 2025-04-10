@@ -66,7 +66,7 @@ public class HelloController implements Initializable {
     Scene scene;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        if (Global.currentUser.getGender().equalsIgnoreCase("female")) {
+        if (Global.currentUser!=null&&Global.currentUser.getGender().equals("female")) {
             profileImg.setImage(new Image("D:\\BankProject\\BankProject\\src\\main\\resources\\com\\example\\homepage\\female icon.png"));
         }
         border.widthProperty().addListener((observable, oldValue, newValue) -> {
