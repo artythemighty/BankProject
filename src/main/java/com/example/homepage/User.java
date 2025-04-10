@@ -1,6 +1,7 @@
 package com.example.homepage;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class User implements Serializable {
     private String name;
@@ -9,13 +10,15 @@ public class User implements Serializable {
     private String gender;
     private String username;
     private String password;
-    User(String name, String surname, int age, String gender, String username, String password) {
+    private Date dateJoined;
+    User(String name, String surname, int age, String gender, String username, String password, Date dateJoined) {
         this.name = name;
         this.surname = surname;
         this.age = age;
         this.gender = gender;
         this.username = username;
         this.password = password;
+        this.dateJoined = dateJoined;
 
     }
     public void setName(String name){
@@ -30,11 +33,11 @@ public class User implements Serializable {
     public String getSurname(){
         return surname;
     }
-    public void setDateOfBirth(int age){
+    public void setAge(int age){
         this.age = age;
 
     }
-    public int getDateOfBirth(){
+    public int getAge(){
         return age;
     }
     public void setGender(String gender){
@@ -55,6 +58,12 @@ public class User implements Serializable {
     }
     public String getPassword(){
         return password;
+    }
+    public void setDateJoined(Date dateJoined){
+        this.dateJoined = dateJoined;
+    }
+    public Date getDateJoined(){
+        return dateJoined;
     }
 
 }

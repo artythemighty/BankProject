@@ -5,7 +5,9 @@ import java.util.ArrayList;
 public class Global {
     private static ArrayList<Requests> requests;
     private static ArrayList<Customer> allCustomers;
-    public static User currentUser;
+    public static Customer currentUser;
+    public static Admin currentAdmin;
+    public static Owner currentOwner;
     private static ArrayList<Admin> allAdmins;
     public static int requestCount=0;
     private static ArrayList<User> allUsers = new ArrayList<>();

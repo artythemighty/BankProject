@@ -7,8 +7,8 @@ import java.util.Random;
 public class Admin extends User {
     private ArrayList<Customer> currentCustomers;
 
-    Admin(String name, String surname, int dateOfBirth, String gender, String username, String password) {
-        super(name, surname, dateOfBirth, gender, username, password);
+    Admin(String name, String surname, int dateOfBirth, String gender, String username, String password,Date date) {
+        super(name, surname, dateOfBirth, gender, username, password,date);
     }
 
     public void ApproveHesabRequest(HesabRequest request) {

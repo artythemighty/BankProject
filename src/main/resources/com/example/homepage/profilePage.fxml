@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane stylesheets="@profileStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.profilePageController">
+   <center>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="558.0" prefWidth="883.0" stylesheets="@profileStyle.css">
+         <children>
+            <ImageView fitHeight="783.0" fitWidth="883.0" layoutY="-108.0" pickOnBounds="true">
+               <image>
+                  <Image url="@bank-vault-background-with-money-gold-vector-38245816.jpg" />
+               </image>
+            </ImageView>
+            <VBox id="signInBox" layoutX="189.0" layoutY="11.0" prefHeight="537.0" prefWidth="502.0" stylesheets="@profileStyle.css">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="82.0" prefWidth="494.0">
+                     <children>
+                        <Label fx:id="nameProp" prefWidth="57.0" text="NAME:" />
+                        <Label fx:id="name" text="Label" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="36.0" prefWidth="482.0">
+                     <children>
+                        <Label fx:id="surnameProp" text="SURNAME:   " />
+                        <Label fx:id="surname" text="Label" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="482.0">
+                     <children>
+                        <Label fx:id="ageProp" text="AGE:   " />
+                        <Label fx:id="age" text="Label" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="482.0">
+                     <children>
+                        <Label fx:id="genderProp" text="GENDER:   " />
+                        <Label fx:id="gender" text="Label" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="72.0" prefWidth="482.0">
+                     <children>
+                        <Label fx:id="phoneProp" text="PHONE:   " />
+                        <Label fx:id="phone" text="Label" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="482.0">
+                     <children>
+                        <Label fx:id="emailProp" text="EMAIL:    " />
+                        <Label fx:id="email" text="Label" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="482.0">
+                     <children>
+                        <Label fx:id="dateProp" text="DATE JOINED:   " />
+                        <Label fx:id="date" text="Label" />
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </VBox>
+            <Button fx:id="backBtn" layoutX="22.0" layoutY="-86.0" mnemonicParsing="false" text="BACK" />
+            <Button id="logOutBtn" fx:id="logOutBtn" layoutX="398.0" layoutY="500.0" mnemonicParsing="false" text="LOG OUT" />
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <ImageView fx:id="profileImg" fitHeight="107.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@iconmale.png" />
+         </image>
+      </ImageView>
+   </top>
+</BorderPane>

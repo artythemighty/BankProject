@@ -5,17 +5,23 @@ import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 public class welcomePageController implements Initializable {
@@ -48,6 +54,7 @@ public class welcomePageController implements Initializable {
     private TextField phone;
     @FXML
     private TextField surname;
+
 
     public void nextMessage(ActionEvent event) {
         NextBtn.setDisable(true);
@@ -207,8 +214,10 @@ public class welcomePageController implements Initializable {
 
 
     }
+    Stage stage;
+    Scene scene;
     public void createUser(ActionEvent event) throws IOException {
-        Global.getAllUsers().add(new User(name.getText(),surname.getText(),Integer.parseInt(age.getText()),gender.getText(),username.getText(),password.getText()));
+        Global.getAllUsers().add(new Customer(name.getText(),surname.getText(),Integer.parseInt(age.getText()),gender.getText(),username.getText(),password.getText(),new Date()));
         fileHandling.writeToFileUsers(Global.getAllUsers());
     }
     public void printuser(ActionEvent event) {
@@ -218,9 +227,23 @@ public class welcomePageController implements Initializable {
     public void saveUser(ActionEvent event) throws IOException, ClassNotFoundException {
         Global.setAllUsers(fileHandling.readFromFileUsers());
     }
+    public void signIn(ActionEvent event) throws IOException, ClassNotFoundException {
+        ArrayList<User> users = fileHandling.readFromFileUsers();
+        for (User user : users) {
+            if (user.getUsername().equals(username.getText()) && user.getPassword().equals(password.getText())) {
+                Global.currentUser = (Customer) user;
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("profilePage.fxml"));
+                stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                stage.setResizable(false);
+                Parent root = loader.load();
+                scene = new Scene(root, 1080, 750);
+                stage.setScene(scene);
+                stage.show();
+            }
+        }
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
     }
 }

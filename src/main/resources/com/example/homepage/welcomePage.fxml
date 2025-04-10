@@ -31,6 +31,7 @@
             <Button mnemonicParsing="false" onAction="#createUser" text="Button" />
             <Button mnemonicParsing="false" onAction="#printuser" text="print" />
             <Button mnemonicParsing="false" onAction="#saveUser" text="file" />
+            <Button mnemonicParsing="false" onAction="#signIn" text="sign in" />
          </children></VBox>
       <Button fx:id="backBtn" disable="true" layoutX="661.0" layoutY="257.0" mnemonicParsing="false" onAction="#backAnimation" opacity="0.0" prefHeight="44.0" prefWidth="109.0" text="Back" />
    </children>
