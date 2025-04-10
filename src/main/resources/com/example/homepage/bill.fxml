@@ -32,7 +32,7 @@
 
         <Label fx:id="messageLabel" style="-fx-text-fill: red;" text="" />
     </VBox>
-   <Button layoutX="14.0" layoutY="36.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" text="Back" />
+   <Button layoutX="14.0" layoutY="36.0" mnemonicParsing="false" onAction="#backToHomePageFromBill" prefHeight="25.0" prefWidth="74.0" text="Back" />
    <ImageView fitHeight="150.0" fitWidth="191.0" layoutX="869.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@logo2.png" />

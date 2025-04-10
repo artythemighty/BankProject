@@ -13,22 +13,22 @@
    <children>
       <HBox layoutX="-8.0" layoutY="159.0" prefHeight="114.0" prefWidth="769.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="171.0" text="Marriage">
+            <Button mnemonicParsing="false" onAction="#switchToMarriage" prefHeight="25.0" prefWidth="171.0" text="Marriage">
                <HBox.margin>
                   <Insets bottom="30.0" left="40.0" right="30.0" top="40.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="171.0" text="Qars Al-hasaneh">
+            <Button mnemonicParsing="false" onAction="#switchToQars" prefHeight="44.0" prefWidth="171.0" text="Qars Al-hasaneh">
                <HBox.margin>
                   <Insets right="30.0" top="40.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="171.0" text="For purches goods">
+            <Button mnemonicParsing="false" onAction="#switchToGoods" prefHeight="44.0" prefWidth="171.0" text="For purches goods">
                <HBox.margin>
                   <Insets right="30.0" top="40.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="171.0" text="Mortgage">
+            <Button mnemonicParsing="false" onAction="#switchToMortgage" prefHeight="44.0" prefWidth="171.0" text="Mortgage">
                <HBox.margin>
                   <Insets right="30.0" top="40.0" />
                </HBox.margin>
@@ -46,7 +46,7 @@
             <Font size="28.0" />
          </font>
       </Text>
-      <Button layoutX="48.0" layoutY="57.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="112.0" text="Back" />
+      <Button layoutX="48.0" layoutY="57.0" mnemonicParsing="false" onAction="#backToHomePageFromLoan" prefHeight="37.0" prefWidth="112.0" text="Back" />
       <Button layoutX="296.0" layoutY="342.0" mnemonicParsing="false" text="Installment payment" />
    </children>
 

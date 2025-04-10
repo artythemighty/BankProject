@@ -9,7 +9,6 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane prefHeight="531.0" prefWidth="898.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.chargeControl">
    <children>
       <VBox layoutX="299.0" layoutY="104.0" prefHeight="340.0" prefWidth="301.0">
@@ -66,7 +65,7 @@
             </Label>
          </children>
       </VBox>
-      <Button layoutX="31.0" layoutY="53.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" text="back" />
+      <Button layoutX="31.0" layoutY="53.0" mnemonicParsing="false" onAction="#backToHomePageFromCharge" prefHeight="25.0" prefWidth="105.0" text="back" />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="772.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@logo2.png" />

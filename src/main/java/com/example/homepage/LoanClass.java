@@ -7,5 +7,7 @@ public class LoanClass {
     private double interestRate;
     private Date aquisitionDate;
     private int timeToPay;
+    private String id;
+
 
 }

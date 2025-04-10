@@ -31,7 +31,7 @@
       <Label text="Request has been sent" visible="false" />
 
     </VBox>
-   <Button layoutX="14.0" layoutY="50.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Back" />
+   <Button layoutX="14.0" layoutY="50.0" mnemonicParsing="false" onAction="#backToLoanPageFromMortgage" prefHeight="25.0" prefWidth="90.0" text="Back" />
    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="627.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@logo2.png" />
