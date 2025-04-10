@@ -6,11 +6,9 @@ public class HesabRequest extends Requests{
     private Customer requester;
     private double interest;
 
-
     public HesabRequest(Date requestDate, String description, int requestId,Customer requester, double interest) {
         super(requestDate, description, requestId);
-        this.requester = requester;
-        this.interest = interest;
+
     }
 
     public Customer getRequester() {

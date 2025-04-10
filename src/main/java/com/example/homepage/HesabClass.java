@@ -9,7 +9,7 @@ public class HesabClass {
     private double balance;
     private double interestRate;
     private String description;
-    public HesabClass(User owner, String number, Date dateCreated, double balance, double interestRate, String description) {
+    HesabClass(User owner, String number, Date dateCreated, double balance, double interestRate, String description) {
         this.owner = owner;
         this.number = number;
         this.dateCreated = dateCreated;

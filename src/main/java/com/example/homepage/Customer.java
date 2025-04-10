@@ -14,7 +14,7 @@ public class Customer extends User {
     private Date joinDate;
     private LocalDate birthDate;
 
-    public Customer(String name, String surname, int dateOfBirth, String gender, String username, String password, Date joinDate, LocalDate birthDate) {
+     Customer(String name, String surname, int dateOfBirth, String gender, String username, String password, Date joinDate, LocalDate birthDate) {
         super(name, surname, dateOfBirth, gender, username, password);
         this.joinDate = joinDate;
         this.birthDate = birthDate;
