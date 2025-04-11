@@ -111,8 +111,11 @@ public class Transfre {
         }
         else System.out.println("no password found");
         if (senderFound&&receiverFound&&amountFound&&cvvFound&&passwordFound){
-            TransactionClass transactionClass = new TransactionClass((Customer)(receiverhesab.getOwner()),receiverhesab,senderhesab,new Date(),Double.parseDouble(amount.getText()));
+            TransactionClass transactionClass = new TransactionClass((Customer)(receiverhesab.getOwner()),receiverhesab,new Date(),Double.parseDouble(amount.getText()),"transfer");
             transactionClass.setSender((Customer) senderhesab.getOwner());
+            transactionClass.setSenderHesab(senderhesab);
+            transactionClass.setSenderName(senderhesab.getOwner().getUsername());
+            transactionClass.setSenderNumber(senderhesab.getNumber());
             transactionClass.transfer();
             transactionClass.subtract();
             Global.getAllTransactions().add(transactionClass);

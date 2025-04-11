@@ -17,14 +17,12 @@ import javax.sound.sampled.*;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Objects;
-import java.util.Random;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class paymentController implements Initializable {
     HesabClass hesab;
     ArrayList<User> users =Global.getAllUsers();
+    ArrayList<TransactionClass> alltransactions =Global.getAllTransactions();
 
     int code=0;
     @FXML
@@ -101,6 +99,10 @@ public class paymentController implements Initializable {
                     hesabClass.setBalance(hesab.getBalance());
                 }
             }
+            TransactionClass transactionClass = new TransactionClass(Global.currentUser,hesab,new Date(),Double.parseDouble(amountf.getText()),"Charge");
+            alltransactions.add(transactionClass);
+            Global.setallTransactions(alltransactions);
+            fileHandling.writeToFileTransactions(Global.getAllTransactions());
             FXMLLoader loader = new FXMLLoader(getClass().getResource("customersStatus.fxml"));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             //stage.setResizable(false);

@@ -23,7 +23,8 @@ public class HelloApplication extends Application {
         Global.setAllUsers(fileHandling.readFromFileUsers());
         Global.setRequests(fileHandling.readFromFileRequests());
         Global.showAllAccounts();
-        //Global.setallTransactions(fileHandling.readFromFileTransactions());
+        Global.setallTransactions(fileHandling.readFromFileTransactions());
+        System.out.println(Global.getAllTransactions().size());
 
 
     }

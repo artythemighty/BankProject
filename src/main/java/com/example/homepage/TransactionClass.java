@@ -12,16 +12,28 @@ public class TransactionClass implements Serializable {
     private HesabClass senderHesab;
     private Date date;
     private double amount;
+    private String type;
+    private String senderName;
+    private String receiverName;
+    private String receiverNumber;
+    private String senderNumber;
 
-    TransactionClass( Customer receiver,HesabClass receiverHesab,HesabClass senderHesab,Date date,double amount) {
+    TransactionClass( Customer receiver,HesabClass receiverHesab,Date date,double amount,String type) {
         Random rand = new Random(System.currentTimeMillis());
         this.id=rand.nextInt(1000000000);
-        this.sender = sender;
         this.receiver = receiver;
         this.receiverHesab = receiverHesab;
-        this.senderHesab = senderHesab;
         this.date = date;
         this.amount = amount;
+        if (sender!=null){
+            this.senderName=sender.getUsername();
+        }
+        this.receiverName = receiver.getUsername();
+        if (senderHesab!=null){
+            this.senderNumber=senderHesab.getNumber();
+        }
+        this.receiverNumber=receiverHesab.getNumber();
+        this.type=type;
     }
 
     public void setSender(Customer sender) {
@@ -76,6 +88,39 @@ public class TransactionClass implements Serializable {
         senderHesab.setBalance(senderHesab.getBalance()-amount);
 
     }
+    public String getType() {
+        return type;
+    }
+    public void setType(String type) {
+        this.type = type;
+    }
+    public String getSenderName() {
+        return senderName;
+    }
+    public void setSenderName(String senderName) {
+        this.senderName = senderName;
+    }
+    public String getReceiverName() {
+        return receiverName;
+    }
+    public void setReceiverName(String receiverName) {
+        this.receiverName = receiverName;
+
+    }
+    public String getReceiverNumber() {
+        return receiverNumber;
+    }
+    public void setReceiverNumber(String receiverNumber) {
+        this.receiverNumber = receiverNumber;
+    }
+    public String getSenderNumber() {
+        return senderNumber;
+    }
+    public void setSenderNumber(String senderNumber) {
+        this.senderNumber = senderNumber;
+    }
+
+
 
 
 }
