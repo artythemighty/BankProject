@@ -23,8 +23,8 @@
             <HBox layoutX="116.0" layoutY="51.0" prefHeight="317.0" prefWidth="667.0" spacing="70.0">
                <children>
                   <Button mnemonicParsing="false" onAction="#changeToAddAdmin" prefHeight="415.0" prefWidth="299.0" text="ADD ADMIN" />
-                  <Button mnemonicParsing="false" prefHeight="409.0" prefWidth="299.0" text="ADMIN LIST" />
-                  <Button layoutX="378.0" layoutY="10.0" mnemonicParsing="false" prefHeight="409.0" prefWidth="299.0" text="Income" />
+                  <Button mnemonicParsing="false" onAction="#switchToAdminList" prefHeight="409.0" prefWidth="299.0" text="ADMIN LIST" />
+                  <Button layoutX="378.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToIncome" prefHeight="409.0" prefWidth="299.0" text="Income" />
                </children>
             </HBox>
          </children>
@@ -33,7 +33,7 @@
    <top>
       <HBox prefHeight="132.0" prefWidth="918.0" spacing="290.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" text="back" />
+            <Button mnemonicParsing="false" onAction="#backToSigninFromOwnerPage" text="back" />
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@logo2.png" />

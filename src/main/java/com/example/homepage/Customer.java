@@ -13,6 +13,7 @@ public class Customer extends User {
     private ArrayList<LoanClass> loans;
     private Date joinDate;
     private LocalDate birthDate;
+    private String active="Active";
 
      Customer(String name, String surname, int dateOfBirth, String gender, String username, String password, Date joinDate, LocalDate birthDate,String phoneNumber) {
         super(name, surname, dateOfBirth, gender, username, password);
@@ -59,4 +60,11 @@ public class Customer extends User {
     }
 
 
+    public String getActive() {
+        return active;
+    }
+
+    public void setActive(String active) {
+        this.active = active;
+    }
 }
