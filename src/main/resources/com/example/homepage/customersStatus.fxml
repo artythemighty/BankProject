@@ -17,7 +17,7 @@
 
         <TableView fx:id="accountsTable" prefHeight="300" prefWidth="500">
             <columns>
-                <TableColumn fx:id="cardColumn" prefWidth="180" text="Card Number" />
+                <TableColumn fx:id="numberColumn" prefWidth="180" text="Number" />
                 <TableColumn fx:id="balanceColumn" prefWidth="177.0" text="Balance ($)" />
                 <TableColumn fx:id="dateColumn" prefWidth="181.0" text="Date Created" />
             </columns>
@@ -33,9 +33,11 @@
    </ImageView>
    <AnchorPane fx:id="choice" layoutX="248.0" layoutY="278.0" prefHeight="187.0" prefWidth="362.0" style="-fx-background-color: #8acbee;">
       <children>
-         <Label alignment="CENTER" layoutX="89.0" layoutY="4.0" stylesheets="@profileStyle.css" text="Please choose account type:" textAlignment="CENTER" />
+         <Label fx:id="choiceTitle" alignment="CENTER" layoutX="89.0" layoutY="4.0" stylesheets="@profileStyle.css" text="Please choose account type:" textAlignment="CENTER" />
          <Button fx:id="savingsBtn" layoutX="41.0" layoutY="58.0" mnemonicParsing="false" onAction="#requestSavings" prefHeight="62.0" prefWidth="111.0" text="savings" />
          <Button fx:id="normalBtn" layoutX="212.0" layoutY="58.0" mnemonicParsing="false" onAction="#requestNormal" prefHeight="62.0" prefWidth="111.0" text="normal" />
+         <Label fx:id="sentLabel" layoutX="70.0" layoutY="58.0" scaleX="1.5" scaleY="1.5" stylesheets="@profileStyle.css" text="Request has been sent to Admins!" />
+         <Button fx:id="okBtn" layoutX="161.0" layoutY="120.0" mnemonicParsing="false" onAction="#requestConfirm" text="ok" />
       </children>
    </AnchorPane>
 

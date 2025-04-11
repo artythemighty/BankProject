@@ -1,27 +1,28 @@
 package com.example.homepage;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class HesabClass {
+public class HesabClass implements Serializable {
     private User owner;
     private String number;
-    private Date dateCreated;
+    private Date date;
     private double balance;
     private double interestRate;
     private String description;
     HesabClass(User owner, String number, Date dateCreated, double balance, double interestRate, String description) {
         this.owner = owner;
         this.number = number;
-        this.dateCreated = dateCreated;
+        this.date = dateCreated;
         this.balance = balance;
         this.interestRate = interestRate;
         this.description = description;
     }
-    private Date getDateCreated() {
-        return dateCreated;
+    public void setDate(Date date) {
+        this.date = date;
     }
-    public void setDateCreated(Date dateCreated) {
-        this.dateCreated = dateCreated;
+    public Date getDate() {
+        return date;
     }
     public User getOwner() {
         return owner;

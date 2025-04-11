@@ -10,7 +10,7 @@ public class Requests implements Serializable {
     private int requestId;
     private String status = "pending";
     private Customer requester;
-    public Requests(Date requestDate, String description, int requestId) {
+    public Requests(Date requestDate, String description) {
         Random rand = new Random(System.currentTimeMillis());
         this.requestDate = requestDate;
         this.description = description;

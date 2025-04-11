@@ -11,8 +11,8 @@ public class HesabRequest extends Requests  {
     private double interest;
     private String requesterUsername;
 
-    public HesabRequest(Date requestDate, String description, int requestId,Customer requester, double interest) {
-        super(requestDate, description, requestId);
+    public HesabRequest(Date requestDate, String description,Customer requester, double interest) {
+        super(requestDate, description);
 
     }
     public double getInterest() {

@@ -23,6 +23,7 @@ public class pedingReq implements Initializable {
     Stage stage;
     Scene scene;
     ArrayList<Requests> requests = Global.getRequests();
+    ArrayList<User> users =Global.getAllUsers();
     @FXML
     private TableView<Requests> requestTable;
     @FXML
@@ -72,11 +73,18 @@ public class pedingReq implements Initializable {
     }
 
     public void acceptRequest(ActionEvent event) throws IOException {
-        Global.getRequests().remove(focusedrequest);
-        fileHandling.writeToFileRequests();
-        focusedrequest.getRequester().getMyRequests().remove(focusedrequest);
+        if (focusedrequest instanceof HesabRequest) {
+            Global.currentAdmin.ApproveHesabRequest((HesabRequest) focusedrequest);
+        }
+        Customer temp = focusedrequest.getRequester();
+        Global.getAllUsers().remove(temp);
+        temp.getMyRequests().remove(focusedrequest);
         focusedrequest.setStatus("Accepted");
-        focusedrequest.getRequester().getMyRequests().add(focusedrequest);
+        temp.getMyRequests().add(focusedrequest);
+        Global.getAllUsers().add(temp);
+        Global.getRequests().remove(focusedrequest);
+        fileHandling.writeToFileUsers(Global.getAllUsers());
+        fileHandling.writeToFileRequests();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("pendingReq .fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setResizable(false);
@@ -87,11 +95,16 @@ public class pedingReq implements Initializable {
     }
 
     public void declineRequest(ActionEvent event) throws IOException {
-        Global.getRequests().remove(focusedrequest);
-        fileHandling.writeToFileRequests();
-        focusedrequest.getRequester().getMyRequests().remove(focusedrequest);
+
+        Customer temp = focusedrequest.getRequester();
+        Global.getAllUsers().remove(temp);
+        temp.getMyRequests().remove(focusedrequest);
         focusedrequest.setStatus("Declined");
-        focusedrequest.getRequester().getMyRequests().add(focusedrequest);
+        temp.getMyRequests().add(focusedrequest);
+        Global.getAllUsers().add(temp);
+        Global.getRequests().remove(focusedrequest);
+        fileHandling.writeToFileUsers(Global.getAllUsers());
+        fileHandling.writeToFileRequests();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("pendingReq .fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setResizable(false);

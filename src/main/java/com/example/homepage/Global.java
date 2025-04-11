@@ -10,7 +10,6 @@ public class Global {
     public static Admin currentAdmin;
     public static Owner currentOwner;
     private static ArrayList<Admin> allAdmins;
-    public static int requestCount=0;
     private static ArrayList<User> allUsers = new ArrayList<>();
     public static ArrayList<User> getAllUsers() {
         return allUsers;
@@ -33,4 +32,4 @@ public class Global {
     public static void setOwner() {
         Global.currentOwner = owner;
     }
-}
+    }
