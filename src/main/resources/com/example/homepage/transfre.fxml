@@ -69,7 +69,7 @@
          </Label>
       </children>
    </VBox>
-   <Button layoutX="31.0" layoutY="53.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" text="back" />
+   <Button layoutX="31.0" layoutY="53.0" mnemonicParsing="false" onAction="#backToHomePageFromTransfer" prefHeight="25.0" prefWidth="105.0" text="back" />
    <ImageView fitHeight="147.0" fitWidth="139.0" layoutX="797.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@logo2-removebg-preview.png" />
