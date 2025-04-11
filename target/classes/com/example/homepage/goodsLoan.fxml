@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="524.0" prefWidth="777.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.mortgagePage">
+<AnchorPane prefHeight="524.0" prefWidth="777.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.mortgagePage">
     <VBox alignment="TOP_CENTER" layoutX="132.0" layoutY="75.0" prefHeight="431.0" prefWidth="480.0" spacing="15">
 
         <Label prefHeight="52.0" prefWidth="368.0" style="-fx-font-size: 22px; -fx-font-weight: bold;                       -fx-background-color: #A7D9FF; -fx-padding: 10 20;                       -fx-background-radius: 10; -fx-text-fill: black;" text="Purches goods Loan Request" />
@@ -34,7 +34,7 @@
    <Button layoutX="14.0" layoutY="50.0" mnemonicParsing="false" onAction="#backToLoanPageFromRequest" prefHeight="25.0" prefWidth="90.0" text="Back" />
    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="627.0" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@logo2.png" />
+         <Image url="@logo2-removebg-preview.png" />
       </image>
    </ImageView>
 </AnchorPane>

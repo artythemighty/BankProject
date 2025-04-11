@@ -70,9 +70,9 @@
       </children>
    </VBox>
    <Button layoutX="31.0" layoutY="53.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" text="back" />
-   <ImageView fitHeight="150.0" fitWidth="178.0" layoutX="772.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="147.0" fitWidth="139.0" layoutX="797.0" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@logo2.png" />
+         <Image url="@logo2-removebg-preview.png" />
       </image>
    </ImageView>
 

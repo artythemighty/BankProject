@@ -21,6 +21,7 @@ public class HelloApplication extends Application {
         stage.setMinWidth(883);
         Global.setOwner();
         Global.setAllUsers(fileHandling.readFromFileUsers());
+        Global.setRequests(fileHandling.readFromFileRequests());
 
 
     }

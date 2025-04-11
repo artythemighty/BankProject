@@ -76,7 +76,7 @@ public class adminController implements Initializable {
     }
 
     public void switchToPendingRequests(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("pendingReq.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("pendingReq .fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Parent root = loader.load();
         scene = new Scene(root, 883, 558);
@@ -84,30 +84,4 @@ public class adminController implements Initializable {
         stage.show();
     }
 
-    public void switchToActiveLoans(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("activeLoan.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Parent root = loader.load();
-        scene = new Scene(root, 883, 558);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    public void switchToAdminInfo(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("adminInfo.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Parent root = loader.load();
-        scene = new Scene(root, 883, 558);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    public void backToSigninFromAdmin(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("welcomePage.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Parent root = loader.load();
-        scene = new Scene(root, 883, 558);
-        stage.setScene(scene);
-        stage.show();
-    }
 }

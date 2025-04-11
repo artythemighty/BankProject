@@ -47,9 +47,9 @@
       <HBox prefHeight="100.0" prefWidth="200.0" spacing="295.0" BorderPane.alignment="CENTER">
          <children>
             <Button mnemonicParsing="false" onAction="#backToOwnerPageFromAddAdmin" text="back" />
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="150.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@logo2.png" />
+                  <Image url="@logo2-removebg-preview.png" />
                </image>
             </ImageView>
          </children>

@@ -1,27 +1,31 @@
 package com.example.homepage;
 
-import java.util.Date;
+import javafx.fxml.Initializable;
 
-public class HesabRequest extends Requests{
-    private Customer requester;
+import java.io.Serializable;
+import java.net.URL;
+import java.util.Date;
+import java.util.ResourceBundle;
+
+public class HesabRequest extends Requests  {
     private double interest;
+    private String requesterUsername;
 
     public HesabRequest(Date requestDate, String description, int requestId,Customer requester, double interest) {
         super(requestDate, description, requestId);
 
-    }
-
-    public Customer getRequester() {
-        return requester;
-    }
-    public void setRequester(Customer requester) {
-        this.requester = requester;
     }
     public double getInterest() {
         return interest;
     }
     public void setInterest(double interest) {
         this.interest = interest;
+    }
+    public String getRequesterUsername() {
+        return requesterUsername;
+    }
+    public void setRequesterUsername(String requesterUsername) {
+        this.requesterUsername = requesterUsername;
     }
 
 }

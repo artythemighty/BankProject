@@ -31,7 +31,7 @@
             </ImageView>
             <HBox fx:id="buttonBox" alignment="CENTER" layoutX="-451.0" layoutY="182.0" pickOnBounds="false" prefHeight="94.0" prefWidth="1786.0" scaleShape="false" spacing="15.0">
                <children>
-                  <Button fx:id="chargeBtn" mnemonicParsing="false" onAction="#switchToCharge" prefHeight="94.0" prefWidth="79.0">
+                  <Button fx:id="chargeBtn" mnemonicParsing="false"  prefHeight="94.0" prefWidth="79.0">
                      <graphic>
                         <VBox alignment="CENTER">
                            <ImageView fx:id="chargeImg" fitHeight="50.0" fitWidth="50.0">
@@ -44,7 +44,7 @@
                      </graphic>
                   </Button>
       
-                                          <Button fx:id="billBtn" mnemonicParsing="false" onAction="#switchToBill" prefHeight="94.0" prefWidth="79.0">
+                                          <Button fx:id="billBtn" mnemonicParsing="false"  prefHeight="94.0" prefWidth="79.0">
                      <graphic>
                         <VBox alignment="CENTER" prefHeight="53.0" prefWidth="50.0">
                            <ImageView fx:id="billImg" fitHeight="50.0" fitWidth="50.0">
@@ -57,7 +57,7 @@
                      </graphic>
                   </Button>
       
-                                          <Button fx:id="reportBtn" mnemonicParsing="false" onAction="#switchToReport" prefHeight="94.0" prefWidth="79.0">
+                                          <Button fx:id="reportBtn" mnemonicParsing="false"  prefHeight="94.0" prefWidth="79.0">
                      <graphic>
                         <VBox alignment="CENTER">
                            <ImageView fx:id="reportImg" fitHeight="50.0" fitWidth="50.0">
@@ -70,7 +70,7 @@
                      </graphic>
                   </Button>
       
-                                          <Button fx:id="loanBtn" mnemonicParsing="false" onAction="#switchToLoan" prefHeight="94.0" prefWidth="79.0">
+                                          <Button fx:id="loanBtn" mnemonicParsing="false"  prefHeight="94.0" prefWidth="79.0">
                      <graphic>
                         <VBox alignment="CENTER">
                            <ImageView fx:id="loanImg" fitHeight="50.0" fitWidth="50.0">
@@ -83,7 +83,7 @@
                      </graphic>
                   </Button>
       
-                                          <Button fx:id="transferBtn" mnemonicParsing="false" onAction="#switchToTransfer" prefHeight="94.0" prefWidth="74.0">
+                                          <Button fx:id="transferBtn" mnemonicParsing="false"  prefHeight="94.0" prefWidth="74.0">
                      <graphic>
                         <VBox alignment="CENTER">
                            <ImageView fx:id="transferImg" fitHeight="50.0" fitWidth="55.0">

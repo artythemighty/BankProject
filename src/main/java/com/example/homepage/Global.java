@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Global {
     private static final Owner owner = new Owner("Amirhossein","Hassanpour",19,"male","Owner","owner1234",10000);
-    private static ArrayList<Requests> requests;
+    private static ArrayList<Requests> requests= new ArrayList<>();
     private static ArrayList<Customer> allCustomers;
     public static Customer currentUser;
     public static Admin currentAdmin;

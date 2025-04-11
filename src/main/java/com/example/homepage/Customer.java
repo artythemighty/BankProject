@@ -7,9 +7,9 @@ import java.util.Date;
 public class Customer extends User {
     private String email;
     private String phoneNumber;
-    private ArrayList<HesabClass> hesabs;
+    private ArrayList<HesabClass> hesabs= new ArrayList<>();
     private ArrayList<Message> userMessages;
-    private ArrayList<Requests> myRequests;
+    private ArrayList<Requests> myRequests= new ArrayList<>();
     private ArrayList<LoanClass> loans;
     private Date joinDate;
     private LocalDate birthDate;
@@ -22,12 +22,6 @@ public class Customer extends User {
         this.phoneNumber = phoneNumber;
     }
 
-    public void RequestHesab(String description,double interest){
-        myRequests.add(new HesabRequest(new Date(),description,Global.requestCount,this,interest));
-        Global.getRequests().add(new HesabRequest(new Date(),description,Global.requestCount,this,interest));
-
-
-    }
     public ArrayList<HesabClass> getHesabs() {
         return hesabs;
     }
@@ -67,4 +61,18 @@ public class Customer extends User {
     public void setActive(String active) {
         this.active = active;
     }
+    public ArrayList<Requests> getMyRequests() {
+         return myRequests;
+    }
+    public void setMyRequests(ArrayList<Requests> myRequests) {
+         this.myRequests = myRequests;
+    }
+    public ArrayList<LoanClass> getLoans() {
+         return loans;
+
+    }
+    public void setLoans(ArrayList<LoanClass> loans) {
+         this.loans = loans;
+    }
+
 }

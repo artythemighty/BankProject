@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane prefHeight="512.0" prefWidth="824.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.adminListControll">
+
+        <children>
+            <Label layoutX="333.0" layoutY="113.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #A7D9FF;" text="Current Admins" />
+
+            <TableView fx:id="customerTable" layoutX="132.0" layoutY="159.0" prefHeight="279.0" prefWidth="560.0" style="-fx-background-color: #A7D9FF;">
+                <columns>
+                    <TableColumn fx:id="userNameColumn" prefWidth="175.0" text="Username" />
+                    <TableColumn fx:id="ownerNameColumn" prefWidth="200.0" text="Owner Name" />
+                    <TableColumn fx:id="phoneNumberColumn" prefWidth="184.0" text="Phone number" />
+                </columns>
+            </TableView>
+            <Button layoutX="22.0" layoutY="50.0" mnemonicParsing="false" onAction="#backToOwnerPageFromAdminList" prefHeight="25.0" prefWidth="77.0" text="Back" />
+            <ImageView fitHeight="140.0" fitWidth="124.0" layoutX="700.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@logo2-removebg-preview.png" />
+                </image>
+            </ImageView>
+            <Button layoutX="386.0" layoutY="456.0" mnemonicParsing="false" onAction="#fucusUser" text="Button" />
+            <VBox id="signInBox" fx:id="costumerInfo" layoutX="220.0" layoutY="38.0" prefHeight="461.0" prefWidth="386.0" style="-fx-background-color: #6ea0f5;" stylesheets="@profileStyle.css" visible="false">
+                <children>
+                    <HBox alignment="CENTER" prefHeight="33.0" prefWidth="366.0">
+                        <children>
+                            <Label scaleX="1.4" scaleY="1.4" text="Costumer info" />
+                        </children>
+                    </HBox>
+                    <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="366.0">
+                        <children>
+                            <Label fx:id="nameProp" prefWidth="57.0" stylesheets="@profileStyle.css" text="NAME:" />
+                            <Label id="profileLabel" fx:id="name" stylesheets="@profileStyle.css" text="Label" />
+                        </children>
+                    </HBox>
+                    <HBox alignment="CENTER_LEFT" prefHeight="34.0" prefWidth="366.0">
+                        <children>
+                            <Label fx:id="surnameProp" text="SURNAME:   " />
+                            <Label id="profileLabel" fx:id="surname" text="Label" />
+                        </children>
+                    </HBox>
+                    <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="366.0">
+                        <children>
+                            <Label fx:id="birthdayProp" text="Birthday:    " />
+                            <Label id="profileLabel" fx:id="birthday" text="Label" />
+                        </children>
+                    </HBox>
+                    <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="366.0">
+                        <children>
+                            <Label fx:id="ageProp" text="Age:  " />
+                            <Label id="profileLabel" fx:id="age" text="Label" />
+                        </children>
+                    </HBox>
+                    <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="366.0">
+                        <children>
+                            <Label fx:id="genderProp" text="Gender:  " />
+                            <Label id="profileLabel" fx:id="gender" text="Label" />
+                        </children>
+                    </HBox>
+                    <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="366.0">
+                        <children>
+                            <Label fx:id="phoneProp" text="Phone:  " />
+                            <Label id="profileLabel" fx:id="phone" text="Label" />
+                        </children>
+                    </HBox>
+                    <HBox alignment="CENTER_LEFT" prefHeight="34.0" prefWidth="366.0">
+                        <children>
+                            <Label fx:id="dateProp" text="DATE JOINED:   " />
+                            <Label id="profileLabel" fx:id="date" text="Label" />
+                        </children>
+                    </HBox>
+                    <HBox fx:id="emailBox" alignment="CENTER_LEFT" layoutX="25.0" layoutY="339.0" prefHeight="31.0" prefWidth="366.0">
+                        <children>
+                            <Label fx:id="emailProp" text="Email :  " />
+                        </children>
+                    </HBox>
+                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="90.0">
+                        <children>
+                            <Button id="logOutBtn" fx:id="closeBtn" mnemonicParsing="false" onAction="#closeInfo" prefHeight="44.0" prefWidth="131.0" text="close" />
+                            <Button id="logOutBtn" mnemonicParsing="false" text="suspend user" />
+                        </children>
+                    </HBox>
+                </children>
+                <opaqueInsets>
+                    <Insets />
+                </opaqueInsets>
+                <padding>
+                    <Insets left="10.0" />
+                </padding>
+            </VBox>
+        </children>
+    </AnchorPane>

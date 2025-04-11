@@ -248,6 +248,7 @@ public class welcomePageController implements Initializable {
             for (User user : users) {
                 if (user.getUsername().equals(username.getText()) && user.getPassword().equals(password.getText())) {
                     if (user instanceof Admin) {
+                        Global.currentAdmin= (Admin) user;
                         FXMLLoader loader = new FXMLLoader(getClass().getResource("adminPage.fxml"));
                         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                         stage.setResizable(false);

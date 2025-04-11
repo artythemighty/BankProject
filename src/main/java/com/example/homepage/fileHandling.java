@@ -21,9 +21,10 @@ public class fileHandling {
         ObjectOutputStream out = new ObjectOutputStream(fileOutputStream);
         out.writeObject(Global.getRequests());
     }
-    public static void readFromFileRequests() throws IOException, ClassNotFoundException {
+    public static ArrayList<Requests> readFromFileRequests() throws IOException, ClassNotFoundException {
         FileInputStream fileInputStream = new FileInputStream("Requests.dat");
         ObjectInputStream in = new ObjectInputStream(fileInputStream);
-        Global.setRequests((ArrayList<Requests>) in.readObject());
+        ArrayList<Requests> allRequests = (ArrayList<Requests>) in.readObject();
+        return allRequests;
     }
 }

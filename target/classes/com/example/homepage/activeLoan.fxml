@@ -24,9 +24,9 @@
             </TableView>
 
         </VBox>
-   <ImageView fitHeight="131.0" fitWidth="184.0" layoutX="642.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="131.0" fitWidth="184.0" layoutX="649.0" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@logo2.png" />
+         <Image url="@logo2-removebg-preview.png" />
       </image>
    </ImageView>
    <Button layoutX="33.0" layoutY="53.0" mnemonicParsing="false" onAction="#backToAdminPageFromActiveLoan" prefHeight="25.0" prefWidth="79.0" text="Back" />
