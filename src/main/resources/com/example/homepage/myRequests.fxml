@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="665.0" prefWidth="854.0" style="-fx-background-color: #D0F1FF" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.40" fx:controller="com.example.homepage.myRequests">
+    <children>
+        <TableView fx:id="requestsTable" layoutX="147.0" layoutY="150.0" prefHeight="400" prefWidth="560" stylesheets="@styles.css">
+            <columns>
+                <TableColumn fx:id="typeColumn" prefWidth="180" text="Type" />
+                <TableColumn fx:id="dateColumn" prefWidth="180" text="Date" />
+                <TableColumn fx:id="statusColumn" prefWidth="200" text="Status" />
+            </columns>
+        </TableView>
+      <Button layoutX="388.0" layoutY="571.0" mnemonicParsing="false" onAction="#backToHomePageFromPendingRequests" prefHeight="25.0" prefWidth="77.0" stylesheets="@styles.css" text="Back" />
+      <ImageView fitHeight="115.0" fitWidth="150.0" layoutX="731.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo2-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="356.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pendig Requests" textAlignment="CENTER" wrappingWidth="141.94921875">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>

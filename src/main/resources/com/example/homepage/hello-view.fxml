@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
@@ -29,78 +30,142 @@
                   <Image url="@logo2-removebg-preview.png" />
                </image>
             </ImageView>
-            <HBox fx:id="buttonBox" alignment="CENTER" layoutX="-451.0" layoutY="182.0" pickOnBounds="false" prefHeight="94.0" prefWidth="1786.0" scaleShape="false" spacing="15.0">
+            <VBox layoutX="224.0" layoutY="168.0" prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Button fx:id="chargeBtn" mnemonicParsing="false"  prefHeight="94.0" prefWidth="79.0">
-                     <graphic>
-                        <VBox alignment="CENTER">
-                           <ImageView fx:id="chargeImg" fitHeight="50.0" fitWidth="50.0">
-                              <image>
-                                 <Image url="@charge.png" />
-                              </image>
-                           </ImageView>
-                           <Label style="-fx-text-fill: Black; -fx-font-size: 14px;" text="Charge" />
-                        </VBox>
-                     </graphic>
-                  </Button>
-      
-                                          <Button fx:id="billBtn" mnemonicParsing="false"  prefHeight="94.0" prefWidth="79.0">
-                     <graphic>
-                        <VBox alignment="CENTER" prefHeight="53.0" prefWidth="50.0">
-                           <ImageView fx:id="billImg" fitHeight="50.0" fitWidth="50.0">
-                              <image>
-                                 <Image url="@bill.png" />
-                              </image>
-                           </ImageView>
-                           <Label style="-fx-text-fill: Black; -fx-font-size: 14px;" text="Bill" />
-                        </VBox>
-                     </graphic>
-                  </Button>
-      
-                                          <Button fx:id="reportBtn" mnemonicParsing="false"  prefHeight="94.0" prefWidth="79.0">
-                     <graphic>
-                        <VBox alignment="CENTER">
-                           <ImageView fx:id="reportImg" fitHeight="50.0" fitWidth="50.0">
-                              <image>
-                                 <Image url="@report.png" />
-                              </image>
-                           </ImageView>
-                           <Label style="-fx-text-fill: Black; -fx-font-size: 14px;" text="Report" />
-                        </VBox>
-                     </graphic>
-                  </Button>
-      
-                                          <Button fx:id="loanBtn" mnemonicParsing="false"  prefHeight="94.0" prefWidth="79.0">
-                     <graphic>
-                        <VBox alignment="CENTER">
-                           <ImageView fx:id="loanImg" fitHeight="50.0" fitWidth="50.0">
-                              <image>
-                                 <Image url="@loan.png" />
-                              </image>
-                           </ImageView>
-                           <Label style="-fx-text-fill: Black; -fx-font-size: 14px;" text="Loan" />
-                        </VBox>
-                     </graphic>
-                  </Button>
-      
-                                          <Button fx:id="transferBtn" mnemonicParsing="false"  prefHeight="94.0" prefWidth="74.0">
-                     <graphic>
-                        <VBox alignment="CENTER">
-                           <ImageView fx:id="transferImg" fitHeight="50.0" fitWidth="55.0">
-                              <image>
-                                 <Image url="@transfer.png" />
-                              </image>
-                           </ImageView>
-                           <Label style="-fx-text-fill: Black; -fx-font-size: 14px;" text="Transfer">
-                              <font>
-                                 <Font size="12.0" />
-                              </font>
-                           </Label>
-                        </VBox>
-                     </graphic>
-                  </Button>
+                  <HBox fx:id="buttonBox" alignment="CENTER" pickOnBounds="false" prefHeight="94.0" prefWidth="1786.0" scaleShape="false" spacing="15.0">
+                     <children>
+                        <Button fx:id="chargeBtn" mnemonicParsing="false" prefHeight="94.0" prefWidth="79.0">
+                           <graphic>
+                              <VBox alignment="CENTER">
+                                 <ImageView fx:id="chargeImg" fitHeight="50.0" fitWidth="50.0">
+                                    <image>
+                                       <Image url="@charge.png" />
+                                    </image>
+                                 </ImageView>
+                                 <Label style="-fx-text-fill: Black; -fx-font-size: 14px;" text="Charge" />
+                              </VBox>
+                           </graphic>
+                        </Button>
+            
+                                                <Button fx:id="billBtn" mnemonicParsing="false" prefHeight="94.0" prefWidth="79.0">
+                           <graphic>
+                              <VBox alignment="CENTER" prefHeight="53.0" prefWidth="50.0">
+                                 <ImageView fx:id="billImg" fitHeight="50.0" fitWidth="50.0">
+                                    <image>
+                                       <Image url="@bill.png" />
+                                    </image>
+                                 </ImageView>
+                                 <Label style="-fx-text-fill: Black; -fx-font-size: 14px;" text="Bill" />
+                              </VBox>
+                           </graphic>
+                        </Button>
+            
+                                                <Button fx:id="reportBtn" mnemonicParsing="false" prefHeight="94.0" prefWidth="79.0">
+                           <graphic>
+                              <VBox alignment="CENTER">
+                                 <ImageView fx:id="reportImg" fitHeight="50.0" fitWidth="50.0">
+                                    <image>
+                                       <Image url="@report.png" />
+                                    </image>
+                                 </ImageView>
+                                 <Label style="-fx-text-fill: Black; -fx-font-size: 14px;" text="Report" />
+                              </VBox>
+                           </graphic>
+                        </Button>
+            
+                                                <Button fx:id="loanBtn" mnemonicParsing="false" prefHeight="94.0" prefWidth="79.0">
+                           <graphic>
+                              <VBox alignment="CENTER">
+                                 <ImageView fx:id="loanImg" fitHeight="50.0" fitWidth="50.0">
+                                    <image>
+                                       <Image url="@loan.png" />
+                                    </image>
+                                 </ImageView>
+                                 <Label style="-fx-text-fill: Black; -fx-font-size: 14px;" text="Loan" />
+                              </VBox>
+                           </graphic>
+                        </Button>
+            
+                                                <Button fx:id="transferBtn" mnemonicParsing="false" prefHeight="94.0" prefWidth="74.0">
+                           <graphic>
+                              <VBox alignment="CENTER">
+                                 <ImageView fx:id="transferImg" fitHeight="50.0" fitWidth="55.0">
+                                    <image>
+                                       <Image url="@transfer.png" />
+                                    </image>
+                                 </ImageView>
+                                 <Label style="-fx-text-fill: Black; -fx-font-size: 14px;" text="Transfer">
+                                    <font>
+                                       <Font size="12.0" />
+                                    </font>
+                                 </Label>
+                              </VBox>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="113.0" prefWidth="435.0">
+                     <children>
+                        <Button fx:id="chargeBtn2" mnemonicParsing="false" prefHeight="94.0" prefWidth="79.0">
+                           <graphic>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <ImageView fx:id="chargeImg2" fitHeight="50.0" fitWidth="50.0">
+                                       <image>
+                                          <Image url="@massgeIcon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label style="-fx-text-fill: Black; -fx-font-size: 14px;" text="Massge" />
+                                 </children>
+                              </VBox>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="85.0" right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="chargeBtn21" mnemonicParsing="false" onAction="#switchToMyRequests" prefHeight="94.0" prefWidth="86.0">
+                           <graphic>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <ImageView fx:id="chargeImg21" fitHeight="45.0" fitWidth="42.0">
+                                       <image>
+                                          <Image url="@requestIcon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label prefHeight="20.0" prefWidth="67.0" style="-fx-text-fill: Black; -fx-font-size: 14px;" text="Requests" />
+                                 </children>
+                              </VBox>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="chargeBtn22" mnemonicParsing="false" onAction="#switchToStatus" prefHeight="94.0" prefWidth="79.0">
+                           <graphic>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <ImageView fx:id="chargeImg22" fitHeight="50.0" fitWidth="50.0">
+                                       <image>
+                                          <Image url="@prof.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label style="-fx-text-fill: Black; -fx-font-size: 14px;" text="Account" />
+                                 </children>
+                              </VBox>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
                </children>
-            </HBox>
+            </VBox>
+            <VBox layoutX="37.0" layoutY="181.0" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <VBox alignment="CENTER" />
+               </children>
+            </VBox>
          </children>
       </AnchorPane>
    </center>
