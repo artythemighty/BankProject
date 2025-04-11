@@ -91,4 +91,7 @@ public class Customer extends User {
     public void setUserMessages(ArrayList<Message> userMessages) {
         this.userMessages = userMessages;
     }
+    public void setHesabs(ArrayList<HesabClass> hesabs) {
+         this.hesabs = hesabs;
+    }
 }

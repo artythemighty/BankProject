@@ -22,6 +22,8 @@ public class HelloApplication extends Application {
         Global.setOwner();
         Global.setAllUsers(fileHandling.readFromFileUsers());
         Global.setRequests(fileHandling.readFromFileRequests());
+        Global.showAllAccounts();
+        //Global.setallTransactions(fileHandling.readFromFileTransactions());
 
 
     }

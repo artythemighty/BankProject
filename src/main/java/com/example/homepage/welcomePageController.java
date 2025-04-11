@@ -262,7 +262,6 @@ public class welcomePageController implements Initializable {
                         Global.currentUser= (Customer) user;
                         FXMLLoader loader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
                         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                        stage.setResizable(false);
                         Parent root = loader.load();
                         scene = new Scene(root, 883, 558);
                         stage.setScene(scene);

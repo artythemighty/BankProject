@@ -56,6 +56,12 @@ public class HesabClass implements Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+    public int getCvv2() {
+        return cvv2;
+    }
+    public void setCvv2(int cvv2) {
+        this.cvv2 = cvv2;
+    }
 
 
 }

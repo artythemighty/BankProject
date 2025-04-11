@@ -1,5 +1,6 @@
 package com.example.homepage;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
@@ -17,7 +18,7 @@ public class Admin extends User {
         this.phoneNumber = phoneNumber;
     }
 
-    public void ApproveHesabRequest(HesabRequest request) {
+    public void ApproveHesabRequest(HesabRequest request) throws IOException {
         String NewNumber;
         Random rand = new Random();
         rand.setSeed(System.currentTimeMillis());
@@ -25,7 +26,9 @@ public class Admin extends User {
         int secondPart = 10000000+rand.nextInt(90000000);
         int cvv2=rand.nextInt(9999);
         NewNumber=String.valueOf(firstPart)+String.valueOf(secondPart);
-        request.getRequester().addHesab(new HesabClass(request.getRequester(),NewNumber,new Date(),0,request.getInterest(),request.getDescription(),cvv2));
+        HesabClass hesab = new HesabClass(request.getRequester(),NewNumber,new Date(),0,request.getInterest(),request.getDescription(),cvv2);
+        request.getRequester().addHesab(hesab);
+        Global.getAllAccounts().add(hesab);
 
 
     }

@@ -1,9 +1,10 @@
 package com.example.homepage;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Random;
 
-public class TransactionClass {
+public class TransactionClass implements Serializable {
     private int id;
     private Customer sender;
     private Customer receiver;
@@ -12,7 +13,7 @@ public class TransactionClass {
     private Date date;
     private double amount;
 
-    TransactionClass(int id, Customer sender,Customer receiver,HesabClass receiverHesab,HesabClass senderHesab,Date date,double amount) {
+    TransactionClass( Customer receiver,HesabClass receiverHesab,HesabClass senderHesab,Date date,double amount) {
         Random rand = new Random(System.currentTimeMillis());
         this.id=rand.nextInt(1000000000);
         this.sender = sender;
@@ -67,6 +68,13 @@ public class TransactionClass {
     }
     public int getId() {
         return id;
+    }
+    public void transfer() {
+        receiverHesab.setBalance(receiverHesab.getBalance()+amount);
+    }
+    public void subtract() {
+        senderHesab.setBalance(senderHesab.getBalance()-amount);
+
     }
 
 

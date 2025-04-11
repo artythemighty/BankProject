@@ -18,8 +18,9 @@
         <TableView fx:id="accountsTable" prefHeight="300" prefWidth="500">
             <columns>
                 <TableColumn fx:id="numberColumn" prefWidth="180" text="Number" />
-                <TableColumn fx:id="balanceColumn" prefWidth="177.0" text="Balance ($)" />
-                <TableColumn fx:id="dateColumn" prefWidth="181.0" text="Date Created" />
+                <TableColumn fx:id="balanceColumn" minWidth="0.0" prefWidth="141.0" text="Balance ($)" />
+            <TableColumn fx:id="cvvColumn" prefWidth="75.0" text="CVV2" />
+                <TableColumn fx:id="dateColumn" prefWidth="217.0" text="Date Created" />
             </columns>
         </TableView>
 
@@ -40,5 +41,6 @@
          <Button fx:id="okBtn" layoutX="161.0" layoutY="120.0" mnemonicParsing="false" onAction="#requestConfirm" text="ok" />
       </children>
    </AnchorPane>
+   <Button layoutX="725.0" layoutY="379.0" mnemonicParsing="false" onAction="#chargeAccount" text="Button" />
 
 </AnchorPane>

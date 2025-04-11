@@ -16,7 +16,7 @@ public class transferSelection {
 
 
     public void swtichToTransfer(ActionEvent event) throws IOException {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("transfer.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("transfre.fxml"));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Parent root = loader.load();
             scene = new Scene(root, 883, 558);

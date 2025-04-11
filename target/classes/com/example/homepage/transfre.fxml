@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.image.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="654.0" prefWidth="936.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.Transfre">
+<AnchorPane prefHeight="654.0" prefWidth="936.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.Transfre">
     <StackPane prefHeight="7.0" prefWidth="0.0" />
      <VBox alignment="TOP_LEFT" layoutX="322.0" layoutY="38.0" maxWidth="431.0" prefHeight="42.0" prefWidth="292.0" spacing="10" style="-fx-background-color: linear-gradient(to bottom right, #A7D9FF, #7ebee8);                  -fx-background-radius: 20; -fx-padding: 20;">
 
@@ -23,9 +27,9 @@
 
          <Label fx:id="cardNumberLabel" style="-fx-text-fill: white; -fx-font-size: 16;" text="0000 0000 0000 0000" />
      </VBox>
-   <VBox layoutX="318.0" layoutY="253.0" prefHeight="340.0" prefWidth="301.0">
+   <VBox layoutX="318.0" layoutY="253.0" prefHeight="340.0" prefWidth="301.0" spacing="10.0">
       <children>
-         <TextField alignment="CENTER" prefHeight="39.0" prefWidth="292.0" promptText="Enter the destination card number">
+         <TextField fx:id="sender" alignment="CENTER" prefHeight="39.0" prefWidth="292.0" promptText="Enter sender account number">
             <font>
                <Font size="18.0" />
             </font>
@@ -33,7 +37,7 @@
                <Insets top="20.0" />
             </VBox.margin>
          </TextField>
-         <TextField alignment="CENTER" prefHeight="31.0" prefWidth="301.0" promptText="Enter the amount">
+         <TextField fx:id="receiver" alignment="CENTER" prefHeight="31.0" prefWidth="301.0" promptText="Enter receiver account number">
             <font>
                <Font size="18.0" />
             </font>
@@ -41,7 +45,8 @@
                <Insets top="20.0" />
             </VBox.margin>
          </TextField>
-         <TextField alignment="CENTER" prefHeight="41.0" prefWidth="612.0" promptText="Cvv number">
+         <TextField fx:id="amount" alignment="CENTER" promptText="amount($)" />
+         <TextField fx:id="cvv" alignment="CENTER" prefHeight="41.0" prefWidth="612.0" promptText="Cvv number">
             <font>
                <Font size="18.0" />
             </font>
@@ -49,15 +54,13 @@
                <Insets top="20.0" />
             </VBox.margin>
          </TextField>
-         <TextField alignment="CENTER" prefHeight="32.0" prefWidth="301.0" promptText="Password">
-            <font>
-               <Font size="18.0" />
-            </font>
-            <VBox.margin>
-               <Insets top="20.0" />
-            </VBox.margin>
-         </TextField>
-         <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="28.0" prefWidth="87.0" text="Pay" textAlignment="CENTER">
+         <HBox prefHeight="70.0" prefWidth="301.0">
+            <children>
+               <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#getPassword" prefHeight="0.0" prefWidth="81.0" text="get" textAlignment="CENTER" />
+               <PasswordField fx:id="passwordField" prefHeight="0.0" prefWidth="221.0" promptText="password" />
+            </children>
+         </HBox>
+         <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#transfer" prefHeight="28.0" prefWidth="87.0" text="Pay" textAlignment="CENTER">
             <VBox.margin>
                <Insets left="110.0" top="30.0" />
             </VBox.margin>
@@ -69,11 +72,19 @@
          </Label>
       </children>
    </VBox>
-   <Button layoutX="31.0" layoutY="53.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" text="back" />
+   <Button layoutX="31.0" layoutY="53.0" mnemonicParsing="false" onAction="#backToHomePageFromTransfer" prefHeight="25.0" prefWidth="105.0" text="back" />
    <ImageView fitHeight="147.0" fitWidth="139.0" layoutX="797.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@logo2-removebg-preview.png" />
       </image>
    </ImageView>
+   <AnchorPane fx:id="message" layoutX="279.0" layoutY="173.0" prefHeight="307.0" prefWidth="392.0" visible="false">
+      <children>
+         <Label layoutX="152.0" layoutY="19.0" scaleX="1.5" scaleY="1.5" stylesheets="@profileStyle.css" text="Do not share!" />
+         <Label layoutX="139.0" layoutY="62.0" scaleX="1.5" scaleY="1.5" stylesheets="@profileStyle.css" text="Your password is:" />
+         <Label fx:id="password" alignment="CENTER" layoutX="179.0" layoutY="144.0" stylesheets="@profileStyle.css" text="Label" textAlignment="CENTER" />
+         <Button fx:id="ok" layoutX="157.0" layoutY="225.0" mnemonicParsing="false" onAction="#closeMessage" prefHeight="44.0" prefWidth="80.0" text="ok" />
+      </children>
+   </AnchorPane>
 
 </AnchorPane>

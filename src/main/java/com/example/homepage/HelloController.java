@@ -18,6 +18,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class HelloController implements Initializable {
@@ -59,16 +60,11 @@ public class HelloController implements Initializable {
     private ImageView background;
     @FXML
     private ImageView profileImg;
-    @FXML
-    private Circle alert;
     Stage stage;
     Scene scene;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        if (Global.currentUser.isNewmessage())
-            alert.setVisible(true);
-        else
-            alert.setVisible(false);
+        test();
         if (Global.currentUser!=null&&Global.currentUser.getGender().equals("female")) {
             profileImg.setImage(new Image("D:\\BankProject\\BankProject\\src\\main\\resources\\com\\example\\homepage\\female icon.png"));
         }
@@ -202,5 +198,9 @@ public class HelloController implements Initializable {
         stage.setScene(scene);
         stage.setResizable(true);
         stage.show();
+    }
+    public void test(){
+        ArrayList<HesabClass> hesabClasses=Global.getAllAccounts();
+        System.out.println(hesabClasses.size());
     }
 }

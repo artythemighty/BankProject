@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1080.0" stylesheets="@profileStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.paymentController">
+   <children>
+      <TextField fx:id="numberfield" layoutX="378.0" layoutY="246.0" prefHeight="41.0" prefWidth="326.0" promptText="card number" stylesheets="@../../../wallet_style.css" />
+      <ImageView fitHeight="455.0" fitWidth="377.0" layoutX="352.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@visacard-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="yearfield" layoutX="378.0" layoutY="334.0" prefHeight="41.0" prefWidth="98.0" promptText="year" stylesheets="@../../../wallet_style.css" />
+      <TextField fx:id="monthfield" layoutX="492.0" layoutY="334.0" prefHeight="41.0" prefWidth="98.0" promptText="month" stylesheets="@../../../wallet_style.css" />
+      <TextField fx:id="dayfield" layoutX="605.0" layoutY="334.0" prefHeight="41.0" prefWidth="98.0" promptText="day" stylesheets="@../../../wallet_style.css" />
+      <TextField fx:id="cvvfield" layoutX="379.0" layoutY="390.0" prefHeight="41.0" prefWidth="326.0" promptText="cvv2" stylesheets="@../../../wallet_style.css" />
+      <PasswordField fx:id="passwordfield" layoutX="377.0" layoutY="501.0" prefHeight="39.0" prefWidth="326.0" promptText="password" stylesheets="@../../../wallet_style.css" />
+      <HBox alignment="CENTER_LEFT" layoutX="377.0" layoutY="560.0" prefHeight="17.0" prefWidth="326.0">
+         <children>
+            <TextField fx:id="codefield" alignment="CENTER" prefHeight="61.0" prefWidth="196.0" promptText="code" stylesheets="@../../../wallet_style.css" />
+            <Label fx:id="paymentcode" alignment="CENTER" prefHeight="40.0" prefWidth="127.0" text="Label" />
+         </children>
+      </HBox>
+      <Button fx:id="check" layoutX="471.0" layoutY="640.0" mnemonicParsing="false" onAction="#checkinfo" prefHeight="71.0" prefWidth="141.0" text="Pay" />
+      <Text fill="WHITE" layoutX="382.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="expiration:" />
+      <Text fx:id="codeerror" fill="#f80000" layoutX="466.0" layoutY="627.0" scaleX="1.5" scaleY="1.5" strokeType="OUTSIDE" strokeWidth="0.0" text="enter security code correctly" visible="false" />
+      <Text fx:id="error" fill="RED" layoutX="444.0" layoutY="738.0" scaleX="2.0" scaleY="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="error" textAlignment="CENTER" visible="false" wrappingWidth="196.0" />
+      <Button layoutX="19.0" layoutY="14.0" mnemonicParsing="false" prefWidth="112.0" text="back" />
+      <TextField fx:id="amountf" layoutX="378.0" layoutY="444.0" prefHeight="41.0" prefWidth="326.0" promptText="Amount" />
+   </children>
+</AnchorPane>
