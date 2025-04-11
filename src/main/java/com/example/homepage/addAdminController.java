@@ -25,6 +25,8 @@ public class addAdminController {
     private TextField age;
     @FXML
     private TextField gender;
+    @FXML
+    private TextField phoneNumber;
 
     public void addAdmin(ActionEvent event) throws IOException {
         boolean isName=false;
@@ -62,7 +64,7 @@ public class addAdminController {
             isPassword=true;
 
         if(isName&&isSurname&&isAge&&isGender&&isUsername&&isPassword) {
-            Global.getAllUsers().add(new Admin(name.getText(),surname.getText(),Integer.parseInt(age.getText()),gender.getText(),username.getText(),password.getText()));
+            Global.getAllUsers().add(new Admin(name.getText(),surname.getText(),Integer.parseInt(age.getText()),gender.getText(),username.getText(),password.getText(),phoneNumber.getText()));
             fileHandling.writeToFileUsers(Global.getAllUsers());
             System.out.print("admin added");
         }

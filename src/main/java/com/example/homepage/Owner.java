@@ -13,7 +13,7 @@ public class Owner extends User{
         this.balance = balance;
     }
 
-    public void addAdmin(String name, String surname, int dateOfBirth, String gender, String username, String password,Date date) {
-        Global.getAllAdmins().add(new Admin(name, surname, dateOfBirth, gender, username, password));
+    public void addAdmin(String name, String surname, int dateOfBirth, String gender, String username, String password,Date date,String Phone) {
+        Global.getAllAdmins().add(new Admin(name, surname, dateOfBirth, gender, username, password, Phone));
     }
 }

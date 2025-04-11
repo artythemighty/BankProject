@@ -11,7 +11,7 @@ public class Admin extends User {
     private String phoneNumber;
     private String active="Active";
 
-    Admin(String name, String surname, int dateOfBirth, String gender, String username, String password) {
+    Admin(String name, String surname, int dateOfBirth, String gender, String username, String password,String phoneNumber) {
         super(name, surname, dateOfBirth, gender, username, password);
         this.adminName = name;
         this.phoneNumber = phoneNumber;

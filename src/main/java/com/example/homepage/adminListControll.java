@@ -30,7 +30,7 @@ public class adminListControll implements Initializable {
     @FXML
     private TableView<Admin> adminTable;
     @FXML
-    private TableColumn<Admin , String> userNameColumn;
+    private TableColumn<Admin , String> ownerNameColumn;
     @FXML
     private TableColumn<Admin , String> adminNameColumn;
     @FXML
@@ -47,25 +47,18 @@ public class adminListControll implements Initializable {
     private Label gender;
     @FXML
     private Label phoneNumber;
-    @FXML
-    private Button suspendBtn;
-    @FXML
-    private Button active;
-    @FXML
-    private Button suspend;
     Admin focusedAdmin;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         adminInfo.setVisible(false);
-        userNameColumn.setCellValueFactory(new PropertyValueFactory<Admin ,String>("username"));
+        ownerNameColumn.setCellValueFactory(new PropertyValueFactory<Admin ,String>("username"));
         adminNameColumn.setCellValueFactory(new PropertyValueFactory<Admin ,String>("adminName"));
         phoneNumberColumn.setCellValueFactory(new PropertyValueFactory<Admin ,String>("phoneNumber"));
         adminTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         for (User user : admins ){
             if(user instanceof Admin){
                 Admin admin = (Admin) user;
-                System.out.println("admin" + admin.getPhoneNumber());
                 adminTable.getItems().add(admin);
             }
         }
@@ -80,34 +73,23 @@ public class adminListControll implements Initializable {
         age.setText(String.valueOf(focusedAdmin.getAge()));
         gender.setText(focusedAdmin.getGender());
         phoneNumber.setText(focusedAdmin.getPhoneNumber());
-        setSuspendBtn();
+        adminInfo.setVisible(true);
+    }
+    public void removeAdmin(ActionEvent event) throws IOException{
+        Global.getAllUsers().remove(focusedAdmin);
+        adminTable.getItems().remove(focusedAdmin);
+        fileHandling.writeToFileUsers(Global.getAllUsers());
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("adminList.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setResizable(false);
+        Parent root = loader.load();
+        scene = new Scene(root, 883, 558);
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void closeInfo(ActionEvent event) throws IOException{
         adminInfo.setVisible(false);
-    }
-
-    public void setSuspendBtn() throws IOException {
-        if(focusedAdmin!=null) {
-            if (focusedAdmin.getActive().equals("Suspended")) {
-                suspendBtn.setText("Activate");
-                suspendBtn.setStyle("-fx-background-color: #49e6c9");
-                suspendBtn.setOnAction(active.getOnAction());
-            }
-            else {
-                suspendBtn.setText("Suspend");
-                suspendBtn.setStyle("-fx-background-color: red");
-                suspendBtn.setOnAction(suspend.getOnAction());
-            }
-        }
-    }
-
-    public void suspendAdmin(ActionEvent event) throws IOException{
-        for(User user : admins){
-            if(user instanceof Admin){
-                
-            }
-        }
     }
 
     public void backToOwnerPageFromAdminList(ActionEvent event) throws IOException {

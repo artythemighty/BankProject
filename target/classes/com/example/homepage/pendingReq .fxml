@@ -27,7 +27,7 @@
         <!-- Optional: Static buttons outside table -->
         <HBox spacing="10">
             <Button onAction="#acceptRequest" style="-fx-background-color: #A7D9FF; -fx-text-fill: black;" text="Approve" />
-            <Button style="-fx-background-color: #ffb3b3; -fx-text-fill: black;" text="Reject" />
+            <Button onAction="#declineRequest" style="-fx-background-color: #ffb3b3; -fx-text-fill: black;" text="Reject" />
         </HBox>
     </VBox>
    <Button layoutX="14.0" layoutY="60.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="86.0" text="back" />
