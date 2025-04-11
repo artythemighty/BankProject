@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="628.0" prefWidth="968.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.pedingReq">
+<AnchorPane prefHeight="628.0" prefWidth="968.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.pedingReq">
     <VBox alignment="TOP_CENTER" layoutX="154.0" layoutY="148.0" prefHeight="410" prefWidth="660" spacing="12">
 
         <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: black;                       -fx-background-color: #A7D9FF; -fx-padding: 10 20; -fx-background-radius: 10;" text="Pending Account Requests" />

@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="520.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.activeLoan">
+<AnchorPane prefHeight="520.0" prefWidth="780.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.activeLoan">
     
         <VBox alignment="TOP_CENTER" layoutX="110.0" layoutY="131.0" prefHeight="360" prefWidth="560" spacing="10">
 
@@ -29,6 +29,6 @@
          <Image url="@logo2.png" />
       </image>
    </ImageView>
-   <Button layoutX="33.0" layoutY="53.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Back" />
+   <Button layoutX="33.0" layoutY="53.0" mnemonicParsing="false" onAction="#backToAdminPageFromActiveLoan" prefHeight="25.0" prefWidth="79.0" text="Back" />
 
 </AnchorPane>
