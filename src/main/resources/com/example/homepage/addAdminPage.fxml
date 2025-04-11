@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
@@ -11,9 +17,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane stylesheets="@profileStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.addAdminController">
+<BorderPane stylesheets="@profileStyle.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.addAdminController">
    <center>
-      <AnchorPane prefHeight="558.0" prefWidth="883.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="1718.0" prefWidth="883.0" BorderPane.alignment="CENTER">
          <children>
             <VBox id="signInBox" alignment="TOP_CENTER" layoutX="234.0" layoutY="14.0" prefHeight="489.0" prefWidth="415.0" spacing="20.0">
                <children>
@@ -24,7 +30,7 @@
                   <TextField fx:id="phoneNumber" alignment="CENTER" layoutX="80.0" layoutY="88.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="39.0" prefWidth="275.0" promptText="Phone Number" stylesheets="@styles.css" />
                   <TextField fx:id="username" alignment="CENTER" layoutX="15.0" layoutY="112.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="39.0" prefWidth="275.0" promptText="Username" />
                   <TextField fx:id="password" alignment="CENTER" layoutX="15.0" layoutY="151.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="39.0" prefWidth="275.0" promptText="Password" />
-                  <TextField alignment="CENTER" layoutX="15.0" layoutY="190.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="39.0" prefWidth="276.0" promptText="confirmPassword" />
+                  <TextField fx:id="confrimPassword" alignment="CENTER" layoutX="15.0" layoutY="190.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="39.0" prefWidth="276.0" promptText="confirmPassword" />
                   <Button id="signInBtn" mnemonicParsing="false" onAction="#addAdmin" stylesheets="@profileStyle.css" text="Add Admin" />
                </children>
                <padding>
@@ -35,6 +41,7 @@
                   <URL value="@styles.css" />
                </stylesheets>
             </VBox>
+            <Label fx:id="adminLabelError" alignment="CENTER" layoutX="321.0" layoutY="604.0" prefHeight="20.0" prefWidth="241.0" text="Label" visible="false" />
          </children>
       </AnchorPane>
    </center>

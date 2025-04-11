@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -27,6 +28,10 @@ public class addAdminController {
     private TextField gender;
     @FXML
     private TextField phoneNumber;
+    @FXML
+    private TextField confirmPassword;
+    @FXML
+    private Label adminLabelError;
 
     public void addAdmin(ActionEvent event) throws IOException {
         boolean isName=false;
@@ -69,8 +74,48 @@ public class addAdminController {
             System.out.print("admin added");
         }
 
+        if(name.getText().isEmpty()||age.getText().isEmpty()||gender.getText().isEmpty()||username.getText().isEmpty()||password.getText().isEmpty()||phoneNumber.getText().isEmpty()||confirmPassword.getText().isEmpty()) {
+            adminLabelError.setVisible(true);
+            adminLabelError.setText("Please fill all the fields");
+            adminLabelError.setStyle("-fx-text-fill: red;");
+            return;
+    }
+        if(password.getText().length()<8) {
+            adminLabelError.setVisible(true);
+            adminLabelError.setText("Password must be at least 8 characters");
+            adminLabelError.setStyle("-fx-text-fill: red;");
+            return;
+        }
+        if(!(password.getText().equals(confirmPassword.getText()))) {
+            adminLabelError.setVisible(true);
+            adminLabelError.setText("Passwords do not match");
+            adminLabelError.setStyle("-fx-text-fill: red;");
+            return;
+        }
+        if(phoneNumber.getText().length()<11) {
+            adminLabelError.setVisible(true);
+            adminLabelError.setText("Phone number must be at least 11 numbers");
+            adminLabelError.setStyle("-fx-text-fill: red;");
+            return;
+        }
+        if (!(gender.getText().equalsIgnoreCase("male")||gender.getText().equalsIgnoreCase("female"))) {
+            adminLabelError.setVisible(true);
+            adminLabelError.setText("Gender must be either male or female");
+            adminLabelError.setStyle("-fx-text-fill: red;");
+            return;
+        }
+        ArrayList<User> users = Global.getAllUsers();
+        for(User user : users) {
+            if(user.getUsername().equals(username.getText())) {
+                adminLabelError.setVisible(true);
+                adminLabelError.setText("Username is already taken");
+                adminLabelError.setStyle("-fx-text-fill: red;");
+                return;
+            }
+        }
 
     }
+
 
     Stage stage;
     Scene scene;
