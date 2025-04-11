@@ -40,7 +40,7 @@
             <Image url="@logo2-removebg-preview.png" />
          </image>
       </ImageView>
-      <Hyperlink layoutX="28.0" layoutY="284.0" text="First please read terms and coniditons before applying for a loan." />
+      <Hyperlink layoutX="28.0" layoutY="284.0" style="-fx-text-fill: red;" text="First please read terms and coniditons before applying for a loan." />
       <Text layoutX="308.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loan Page">
          <font>
             <Font size="28.0" />

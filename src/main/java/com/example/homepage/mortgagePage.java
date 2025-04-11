@@ -6,13 +6,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class mortgagePage {
     @FXML
@@ -30,6 +30,9 @@ public class mortgagePage {
     @FXML
     private Label termLabel;
 
+    @FXML
+    private Label loanId;
+
 
     @FXML
     public void initialize() {
@@ -43,6 +46,170 @@ public class mortgagePage {
         termSlider.valueProperty().addListener((obs, oldVal, newVal) -> {
             termLabel.setText(newVal.intValue() + " months");
         });
+
+    }
+
+
+
+    @FXML
+    private void submitMortgageLoanRequest() throws IOException, ClassNotFoundException {
+        if(Global.currentUser == null){
+            System.out.println("You are not logged in");
+            return;
+        }
+
+        String name = Global.currentUser.getName();
+        int amount = (int) amountSlider.getValue();
+        int term = (int) termSlider.getValue();
+        String loanType = "Mortgage";
+
+        LoanRequest LoanRequest = new LoanRequest(name, amount, term, loanType);
+        ArrayList<LoanRequest> allRequests;
+        allRequests = fileHandling.readFromFileLoanRequests();
+        allRequests=new ArrayList<>();
+        allRequests.add(LoanRequest);
+        fileHandling.writeToFileLoanRequests(allRequests);
+        System.out.println("Saved to file" + LoanRequest.getRequestId());
+        loanId.setVisible(true);
+        loanId.setStyle("-fx-text-fill: green");
+        loanId.setText("Request has been sent.Please remember the ID:"+" "+LoanRequest.getRequestId()+ loanType);
+        ArrayList<User> users = Global.getAllUsers();
+        for(User user : users) {
+            if(user.getUsername().equals(nameField.getText())) {
+                continue;
+            }
+            else {
+                loanId.setVisible(true);
+                loanId.setText("Username not equal");
+                loanId.setStyle("-fx-text-fill: red");
+            }
+        }
+
+        if(nameField.getText().isEmpty()){
+            loanId.setVisible(true);
+            loanId.setText("Username is empty");
+            loanId.setStyle("-fx-text-fill: red");
+        }
+    }
+
+    @FXML
+    private void submitPurchesGoodsLoanRequest() throws IOException, ClassNotFoundException {
+        if(Global.currentUser == null){
+            System.out.println("You are not logged in");
+            return;
+        }
+        String name = Global.currentUser.getName();
+        int amount = (int) amountSlider.getValue();
+        int term = (int) termSlider.getValue();
+        String loanType = "PurchesGoods";
+
+        LoanRequest LoanRequest = new LoanRequest(name, amount, term, loanType);
+        ArrayList<LoanRequest> allRequests;
+        allRequests = fileHandling.readFromFileLoanRequests();
+        allRequests=new ArrayList<>();
+        allRequests.add(LoanRequest);
+        fileHandling.writeToFileLoanRequests(allRequests);
+        System.out.println("Saved to file" + LoanRequest.getRequestId());
+        loanId.setVisible(true);
+        loanId.setStyle("-fx-text-fill: green");
+        loanId.setText("Request has been sent.Please remember the ID:"+" "+LoanRequest.getRequestId()+ loanType);
+        ArrayList<User> users = Global.getAllUsers();
+        for(User user : users) {
+            if(user.getUsername().equals(nameField.getText())) {
+                continue;
+            }
+            else {
+                loanId.setVisible(true);
+                loanId.setText("Username not equal");
+                loanId.setStyle("-fx-text-fill: red");
+            }
+        }
+
+        if(nameField.getText().isEmpty()){
+            loanId.setVisible(true);
+            loanId.setText("Username is empty");
+            loanId.setStyle("-fx-text-fill: red");
+        }
+    }
+
+    @FXML
+    public void submitQarsAlHasenhLoanRequest() throws IOException, ClassNotFoundException {
+        if(Global.currentUser == null){
+            System.out.println("You are not logged in");
+            return;
+        }
+        String name = Global.currentUser.getName();
+        int amount = (int) amountSlider.getValue();
+        int term = (int) termSlider.getValue();
+        String loanType = "QarsAlHasenh";
+
+        LoanRequest LoanRequest = new LoanRequest(name, amount, term, loanType);
+        ArrayList<LoanRequest> allRequests;
+        allRequests = fileHandling.readFromFileLoanRequests();
+        allRequests=new ArrayList<>();
+        allRequests.add(LoanRequest);
+        fileHandling.writeToFileLoanRequests(allRequests);
+        System.out.println("Saved to file" + LoanRequest.getRequestId());
+        loanId.setVisible(true);
+        loanId.setStyle("-fx-text-fill: green");
+        loanId.setText("Request has been sent.Please remember the ID:"+" "+LoanRequest.getRequestId()+ loanType);
+        ArrayList<User> users = Global.getAllUsers();
+        for(User user : users) {
+            if(user.getUsername().equals(nameField.getText())) {
+                continue;
+            }
+            else {
+                loanId.setVisible(true);
+                loanId.setText("Username not equal");
+                loanId.setStyle("-fx-text-fill: red");
+            }
+        }
+
+        if(nameField.getText().isEmpty()){
+            loanId.setVisible(true);
+            loanId.setText("Username is empty");
+            loanId.setStyle("-fx-text-fill: red");
+        }
+    }
+
+    @FXML
+    public void submitMarriageLoanRequest() throws IOException, ClassNotFoundException {
+        if(Global.currentUser == null){
+            System.out.println("You are not logged in");
+            return;
+        }
+        String name = Global.currentUser.getName();
+        int amount = (int) amountSlider.getValue();
+        int term = (int) termSlider.getValue();
+        String loanType = "Marriage";
+
+        LoanRequest LoanRequest = new LoanRequest(name, amount, term, loanType);
+        ArrayList<LoanRequest> allRequests;
+        allRequests = fileHandling.readFromFileLoanRequests();
+        allRequests=new ArrayList<>();
+        allRequests.add(LoanRequest);
+        fileHandling.writeToFileLoanRequests(allRequests);
+        System.out.println("Saved to file" + LoanRequest.getRequestId());
+        loanId.setVisible(true);
+        loanId.setStyle("-fx-text-fill: green");
+        loanId.setText("Request has been sent.Please remember the ID:"+" "+LoanRequest.getRequestId()+ loanType);
+        ArrayList<User> users = Global.getAllUsers();
+        for(User user : users) {
+            if(user.getUsername().equals(nameField.getText())) {
+                continue;
+            }
+            else {
+                loanId.setVisible(true);
+                loanId.setText("Username not equal");
+                loanId.setStyle("-fx-text-fill: red");
+            }
+        }
+
+        if(nameField.getText().isEmpty()){
+            loanId.setVisible(true);
+            loanId.setText("Username is empty");
+            loanId.setStyle("-fx-text-fill: red");
+        }
     }
 
     Stage stage;

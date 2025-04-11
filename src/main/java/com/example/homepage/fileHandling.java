@@ -27,4 +27,31 @@ public class fileHandling {
         ArrayList<Requests> allRequests = (ArrayList<Requests>) in.readObject();
         return allRequests;
     }
+    public static ArrayList<LoanRequest> readFromFileLoanRequests() throws IOException, ClassNotFoundException {
+        File file = new File("Requests.dat");
+
+        if (!file.exists()) {
+            return new ArrayList<>();
+        }
+
+        try (FileInputStream fileInputStream = new FileInputStream(file);
+             ObjectInputStream in = new ObjectInputStream(fileInputStream)) {
+            return (ArrayList<LoanRequest>) in.readObject();
+        } catch (EOFException e) {
+            return new ArrayList<>();
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+            throw e;
+        }
+    }
+
+    public static void writeToFileLoanRequests(ArrayList<LoanRequest> loanRequests) throws IOException {
+        try (FileOutputStream fileOutputStream = new FileOutputStream("Requests.dat");
+             ObjectOutputStream out = new ObjectOutputStream(fileOutputStream)) {
+            out.writeObject(loanRequests);
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw e;
+        }
+    }
 }

@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="524.0" prefWidth="777.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.mortgagePage">
+<AnchorPane prefHeight="558.0" prefWidth="777.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.mortgagePage">
     <VBox alignment="TOP_CENTER" layoutX="132.0" layoutY="75.0" prefHeight="431.0" prefWidth="480.0" spacing="15">
 
         <Label prefHeight="52.0" prefWidth="368.0" style="-fx-font-size: 22px; -fx-font-weight: bold;                       -fx-background-color: #A7D9FF; -fx-padding: 10 20;                       -fx-background-radius: 10; -fx-text-fill: black;" text="Qars Al-hasaneh Loan Request" />
@@ -27,7 +27,7 @@
             <Label fx:id="termLabel" style="-fx-font-weight: bold;" text="12 months" />
         </VBox>
 
-        <Button style="-fx-background-color: #A7D9FF; -fx-text-fill: black; -fx-font-weight: bold;                        -fx-padding: 8 16; -fx-background-radius: 8;" text="Submit Request" />
+        <Button onAction="#submitQarsAlHasenhLoanRequest" style="-fx-background-color: #A7D9FF; -fx-text-fill: black; -fx-font-weight: bold;                        -fx-padding: 8 16; -fx-background-radius: 8;" text="Submit Request" />
       <Label text="Request has been sent" visible="false" />
 
     </VBox>
@@ -37,4 +37,5 @@
          <Image url="@logo2-removebg-preview.png" />
       </image>
    </ImageView>
+   <Label fx:id="loanId" layoutX="29.0" layoutY="527.0" prefHeight="20.0" prefWidth="692.0" text="Label" visible="false" />
 </AnchorPane>
