@@ -9,13 +9,13 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class adminInfoControll {
+public class incomePage {
 
     Stage stage;
     Scene scene;
 
-    public void backToAdminPage(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("adminPage.fxml"));
+    public void backToOwnerPageFromIncomePage(ActionEvent event)throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ownerPage.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setResizable(false);
         Parent root = loader.load();
@@ -23,5 +23,4 @@ public class adminInfoControll {
         stage.setScene(scene);
         stage.show();
     }
-
 }

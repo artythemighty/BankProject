@@ -35,9 +35,9 @@
             </Button>
          </children>
       </HBox>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="601.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="140.0" fitWidth="128.0" layoutX="633.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@logo2.png" />
+            <Image url="@logo2-removebg-preview.png" />
          </image>
       </ImageView>
       <Hyperlink layoutX="28.0" layoutY="284.0" text="First please read terms and coniditons before applying for a loan." />

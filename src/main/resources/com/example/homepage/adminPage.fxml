@@ -67,7 +67,7 @@
             <Button fx:id="backBtn" mnemonicParsing="false" onAction="#backToSigninFromAdmin" prefHeight="44.0" prefWidth="67.0" stylesheets="@styles.css" text="back" />
             <ImageView fx:id="logo" fitHeight="150.0" fitWidth="137.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@logo2.png" />
+                  <Image url="@logo2-removebg-preview.png" />
                </image>
             </ImageView>
          </children>

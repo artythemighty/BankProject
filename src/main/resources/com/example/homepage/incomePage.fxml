@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="585.0" prefWidth="731.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.incomePage">
+    <VBox alignment="TOP_CENTER" layoutX="96.0" layoutY="113.0" prefWidth="540" spacing="15">
+
+        <Label style="-fx-font-size: 20px; -fx-font-weight: bold;                       -fx-background-color: #A7D9FF; -fx-padding: 10 20;                       -fx-background-radius: 10; -fx-text-fill: black;" text="Owner Income Overview" />
+
+        <TableView fx:id="incomeTable" prefHeight="300" prefWidth="500">
+            <columns>
+                <TableColumn fx:id="sourceColumn" prefWidth="173.0" text="Username" />
+                <TableColumn fx:id="dateColumn" prefWidth="173.0" text="Date" />
+                <TableColumn fx:id="amountColumn" prefWidth="182.0" text="Amount ($)" />
+            </columns>
+        </TableView>
+
+        <HBox alignment="CENTER_RIGHT" prefWidth="500" spacing="10">
+            <Label style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Total Income:" />
+            <Label fx:id="totalIncomeLabel" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: green;" text="0.00$" />
+        </HBox>
+    </VBox>
+   <Button layoutX="14.0" layoutY="44.0" mnemonicParsing="false" onAction="#backToOwnerPageFromIncomePage" prefHeight="44.0" prefWidth="72.0" text="Back" />
+   <ImageView fitHeight="114.0" fitWidth="162.0" layoutX="617.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@logo2-removebg-preview.png" />
+      </image>
+   </ImageView>
+</AnchorPane>

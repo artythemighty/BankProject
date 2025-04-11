@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="670.0" prefWidth="823.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.customersStatus">
+
+    <VBox alignment="TOP_CENTER" layoutX="142.0" layoutY="161.0" prefWidth="540" spacing="15">
+
+        <Label style="-fx-font-size: 20px; -fx-font-weight: bold;                       -fx-background-color: #A7D9FF; -fx-padding: 10 20;                       -fx-background-radius: 10; -fx-text-fill: black;" text="Your Active Accounts" />
+
+        <TableView fx:id="accountsTable" prefHeight="300" prefWidth="500">
+            <columns>
+                <TableColumn fx:id="cardColumn" prefWidth="180" text="Card Number" />
+                <TableColumn fx:id="balanceColumn" prefWidth="177.0" text="Balance ($)" />
+                <TableColumn fx:id="dateColumn" prefWidth="181.0" text="Date Created" />
+            </columns>
+        </TableView>
+
+        <Button onAction="#switchToSignupFromStatus" style="-fx-background-color: #A7D9FF; -fx-font-weight: bold;                        -fx-background-radius: 10; -fx-padding: 10 20;" text="Request New Account" />
+    </VBox>
+   <Button layoutX="14.0" layoutY="77.0" mnemonicParsing="false" onAction="#backToHomePageFromStatus" prefHeight="25.0" prefWidth="90.0" text="Back" />
+   <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="673.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@logo2-removebg-preview.png" />
+      </image>
+   </ImageView>
+
+</AnchorPane>

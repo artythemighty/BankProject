@@ -32,9 +32,9 @@
 
     </VBox>
    <Button layoutX="14.0" layoutY="50.0" mnemonicParsing="false" onAction="#backToLoanPageFromQars" prefHeight="25.0" prefWidth="90.0" text="Back" />
-   <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="627.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="143.0" fitWidth="133.0" layoutX="644.0" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@logo2.png" />
+         <Image url="@logo2-removebg-preview.png" />
       </image>
    </ImageView>
 </AnchorPane>

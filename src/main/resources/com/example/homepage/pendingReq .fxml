@@ -28,9 +28,9 @@
         </HBox>
     </VBox>
    <Button layoutX="14.0" layoutY="60.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="86.0" text="back" />
-   <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="814.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="147.0" fitWidth="131.0" layoutX="837.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@logo2.png" />
+         <Image url="@logo2-removebg-preview.png" />
       </image>
    </ImageView>
 </AnchorPane>
