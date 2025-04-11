@@ -13,6 +13,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -58,10 +59,16 @@ public class HelloController implements Initializable {
     private ImageView background;
     @FXML
     private ImageView profileImg;
+    @FXML
+    private Circle alert;
     Stage stage;
     Scene scene;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        if (Global.currentUser.isNewmessage())
+            alert.setVisible(true);
+        else
+            alert.setVisible(false);
         if (Global.currentUser!=null&&Global.currentUser.getGender().equals("female")) {
             profileImg.setImage(new Image("D:\\BankProject\\BankProject\\src\\main\\resources\\com\\example\\homepage\\female icon.png"));
         }

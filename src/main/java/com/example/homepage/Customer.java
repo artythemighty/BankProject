@@ -8,12 +8,13 @@ public class Customer extends User {
     private String email;
     private String phoneNumber;
     private ArrayList<HesabClass> hesabs= new ArrayList<>();
-    private ArrayList<Message> userMessages;
+    private ArrayList<Message> userMessages=new ArrayList<>();
     private ArrayList<Requests> myRequests= new ArrayList<>();
     private ArrayList<LoanClass> loans;
     private Date joinDate;
     private LocalDate birthDate;
     private String active="Active";
+    private boolean newmessage=false;
 
      Customer(String name, String surname, int dateOfBirth, String gender, String username, String password, Date joinDate, LocalDate birthDate,String phoneNumber) {
         super(name, surname, dateOfBirth, gender, username, password);
@@ -75,4 +76,19 @@ public class Customer extends User {
          this.loans = loans;
     }
 
+    public boolean isNewmessage() {
+        return newmessage;
+    }
+
+    public void setNewmessage(boolean newmessage) {
+        this.newmessage = newmessage;
+    }
+
+    public ArrayList<Message> getUserMessages() {
+        return userMessages;
+    }
+
+    public void setUserMessages(ArrayList<Message> userMessages) {
+        this.userMessages = userMessages;
+    }
 }

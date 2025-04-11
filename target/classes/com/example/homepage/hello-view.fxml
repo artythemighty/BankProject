@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -16,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="border" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.HelloController">
+<BorderPane fx:id="border" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.homepage.HelloController">
    <center>
       <AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="883.0" stylesheets="@styles.css" BorderPane.alignment="CENTER">
          <children>
@@ -30,9 +25,9 @@
                   <Image url="@logo2-removebg-preview.png" />
                </image>
             </ImageView>
-            <VBox layoutX="224.0" layoutY="169.0" prefHeight="199.0" prefWidth="415.0">
+            <VBox layoutX="224.0" layoutY="169.0" prefHeight="250.0" prefWidth="435.0">
                <children>
-                  <HBox fx:id="buttonBox" alignment="CENTER" pickOnBounds="false" prefHeight="94.0" prefWidth="1786.0" scaleShape="false" spacing="15.0">
+                  <HBox fx:id="buttonBox" alignment="CENTER" pickOnBounds="false" prefHeight="121.0" prefWidth="435.0" scaleShape="false" spacing="15.0">
                      <children>
                         <Button fx:id="chargeBtn" mnemonicParsing="false" prefHeight="94.0" prefWidth="79.0">
                            <graphic>
@@ -47,7 +42,7 @@
                            </graphic>
                         </Button>
             
-                                                <Button fx:id="billBtn" mnemonicParsing="false" prefHeight="94.0" prefWidth="79.0">
+                                                      <Button fx:id="billBtn" mnemonicParsing="false" prefHeight="94.0" prefWidth="74.0">
                            <graphic>
                               <VBox alignment="CENTER" prefHeight="53.0" prefWidth="50.0">
                                  <ImageView fx:id="billImg" fitHeight="50.0" fitWidth="50.0">
@@ -60,7 +55,7 @@
                            </graphic>
                         </Button>
             
-                                                <Button fx:id="reportBtn" mnemonicParsing="false" prefHeight="94.0" prefWidth="79.0">
+                                                      <Button fx:id="reportBtn" mnemonicParsing="false" prefHeight="94.0" prefWidth="74.0">
                            <graphic>
                               <VBox alignment="CENTER">
                                  <ImageView fx:id="reportImg" fitHeight="50.0" fitWidth="50.0">
@@ -73,7 +68,7 @@
                            </graphic>
                         </Button>
             
-                                                <Button fx:id="loanBtn" mnemonicParsing="false" onAction="#switchToLoan" prefHeight="94.0" prefWidth="79.0">
+                                                      <Button fx:id="loanBtn" mnemonicParsing="false" onAction="#switchToLoan" prefHeight="94.0" prefWidth="79.0">
                            <graphic>
                               <VBox alignment="CENTER">
                                  <ImageView fx:id="loanImg" fitHeight="50.0" fitWidth="50.0">
@@ -86,7 +81,7 @@
                            </graphic>
                         </Button>
             
-                                                <Button fx:id="transferBtn" mnemonicParsing="false" prefHeight="94.0" prefWidth="74.0">
+                                                      <Button fx:id="transferBtn" mnemonicParsing="false" prefHeight="94.0" prefWidth="74.0">
                            <graphic>
                               <VBox alignment="CENTER">
                                  <ImageView fx:id="transferImg" fitHeight="50.0" fitWidth="55.0">
@@ -104,9 +99,9 @@
                         </Button>
                      </children>
                   </HBox>
-                  <HBox prefHeight="113.0" prefWidth="435.0">
+                  <HBox prefHeight="95.0" prefWidth="435.0">
                      <children>
-                        <Button fx:id="chargeBtn2" mnemonicParsing="false" prefHeight="94.0" prefWidth="79.0">
+                        <Button fx:id="chargeBtn2" mnemonicParsing="false" prefHeight="101.0" prefWidth="79.0">
                            <graphic>
                               <VBox alignment="CENTER">
                                  <children>
@@ -123,7 +118,7 @@
                               <Insets left="85.0" right="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button fx:id="chargeBtn21" mnemonicParsing="false" onAction="#switchToMyRequests" prefHeight="94.0" prefWidth="86.0">
+                        <Button fx:id="chargeBtn21" mnemonicParsing="false" onAction="#switchToMyRequests" prefHeight="114.0" prefWidth="86.0">
                            <graphic>
                               <VBox alignment="CENTER">
                                  <children>
@@ -140,7 +135,7 @@
                               <Insets right="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button fx:id="chargeBtn22" mnemonicParsing="false" onAction="#switchToStatus" prefHeight="94.0" prefWidth="79.0">
+                        <Button fx:id="chargeBtn22" mnemonicParsing="false" onAction="#switchToStatus" prefHeight="112.0" prefWidth="79.0">
                            <graphic>
                               <VBox alignment="CENTER">
                                  <children>
