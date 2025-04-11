@@ -23,8 +23,9 @@ public class Admin extends User {
         rand.setSeed(System.currentTimeMillis());
         int firstPart = 10000000+rand.nextInt(90000000);
         int secondPart = 10000000+rand.nextInt(90000000);
+        int cvv2=rand.nextInt(9999);
         NewNumber=String.valueOf(firstPart)+String.valueOf(secondPart);
-        request.getRequester().addHesab(new HesabClass(request.getRequester(),NewNumber,new Date(),0,request.getInterest(),request.getDescription()));
+        request.getRequester().addHesab(new HesabClass(request.getRequester(),NewNumber,new Date(),0,request.getInterest(),request.getDescription(),cvv2));
 
 
     }

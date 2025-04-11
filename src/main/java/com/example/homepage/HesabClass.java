@@ -10,13 +10,15 @@ public class HesabClass implements Serializable {
     private double balance;
     private double interestRate;
     private String description;
-    HesabClass(User owner, String number, Date dateCreated, double balance, double interestRate, String description) {
+    private int cvv2;
+    HesabClass(User owner, String number, Date dateCreated, double balance, double interestRate, String description, int cvv2) {
         this.owner = owner;
         this.number = number;
         this.date = dateCreated;
         this.balance = balance;
         this.interestRate = interestRate;
         this.description = description;
+        this.cvv2 = cvv2;
     }
     public void setDate(Date date) {
         this.date = date;
